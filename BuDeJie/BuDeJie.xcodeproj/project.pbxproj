@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C04231F350F00410F9E /* XMGTabBar.m */; };
+		ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C07231F58CE00410F9E /* UIView+Frame.m */; };
+		ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */; };
+		ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */; };
 		ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF1231E14F400E425BB /* Main.storyboard */; };
 		ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF4231E14F500E425BB /* Assets.xcassets */; };
 		ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF6231E14F500E425BB /* LaunchScreen.storyboard */; };
@@ -33,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABB08C03231F350F00410F9E /* XMGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
+		ABB08C04231F350F00410F9E /* XMGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
+		ABB08C06231F58CE00410F9E /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		ABB08C07231F58CE00410F9E /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		ABB08C09231F5D4500410F9E /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
+		ABB08C0D231F723300410F9E /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		ABB08C10231FE2F100410F9E /* XMGNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGNavigationViewController.h; sourceTree = "<group>"; };
+		ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationViewController.m; sourceTree = "<group>"; };
 		ABF63DE8231E14F400E425BB /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF63DF2231E14F400E425BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABF63DF4231E14F500E425BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +184,7 @@
 				ABF63E15231E57B200E425BB /* AppDelegate.h */,
 				ABF63E17231E57B200E425BB /* AppDelegate.m */,
 				ABF63E16231E57B200E425BB /* main.m */,
+				ABB08C09231F5D4500410F9E /* BuDeJie.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -322,6 +336,8 @@
 			children = (
 				ABF63E3B231E8AEA00E425BB /* XMGTabBarController.h */,
 				ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */,
+				ABB08C10231FE2F100410F9E /* XMGNavigationViewController.h */,
+				ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,6 +352,8 @@
 		ABF63E3E231E8AEA00E425BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABB08C03231F350F00410F9E /* XMGTabBar.h */,
+				ABB08C04231F350F00410F9E /* XMGTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +363,10 @@
 			children = (
 				ABF63E41231E912500E425BB /* UIImage+Image.h */,
 				ABF63E42231E912500E425BB /* UIImage+Image.m */,
+				ABB08C06231F58CE00410F9E /* UIView+Frame.h */,
+				ABB08C07231F58CE00410F9E /* UIView+Frame.m */,
+				ABB08C0D231F723300410F9E /* UIBarButtonItem+Item.h */,
+				ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -450,15 +472,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
 				ABF63E32231E591200E425BB /* XMGMeViewController.m in Sources */,
 				ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */,
 				ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */,
 				ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */,
 				ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */,
 				ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */,
+				ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */,
+				ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */,
 				ABF63E2F231E58DF00E425BB /* XMGFriendTrendViewController.m in Sources */,
 				ABF63E28231E57B300E425BB /* main.m in Sources */,
 				ABF63E29231E57B300E425BB /* AppDelegate.m in Sources */,
+				ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +567,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -598,6 +625,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -618,6 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,6 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -17,12 +17,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupNavBar];
 }
+
+
+//设置导航条
+-(void)setupNavBar
+{
+    //左边按钮
+   // self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"MainTagSubIcon"] highImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(tagClick)];
+    
+    //设置
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
+    //夜间模型
+    UIBarButtonItem *nightItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
+    
+    //右边按钮
+    self.navigationItem.rightBarButtonItems =@[settingItem,nightItem];
+    
+    //titleView
+    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    self.navigationItem.title = @"我的";
+    
+    //只要是通过模型设置,都是通过富文本设置
+    //设置导航条标题 =>UINavigationBar
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:attrs];
+    
+    
+}
+
+#pragma mark --左边按钮点击事件
+-(void)setting
+{
+    XMGFunc;
+}
+
+-(void)night:(UIButton *)button
+{
+    button.selected = !button.selected;
+     XMGFunc;
+}
+
+
+
+
 
 #pragma mark - Table view data source
 
