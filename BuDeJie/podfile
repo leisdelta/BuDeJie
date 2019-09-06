@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+target 'BuDeJie' do
+pod 'AFNetworking'
+pod 'SDAutoLayout'
+pod 'MBProgressHUD'
+pod 'IQKeyboardManager'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'AvoidCrash'
+pod 'Canvas'
+pod 'GPUImage'
+pod 'ImagePlayerView' ,'~>2.0.3'
+#pod 'AFNetworking', '~> 3.2.1'
+pod 'SDWebImage', '~> 5.1.0'
+end
