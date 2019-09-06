@@ -14,7 +14,7 @@
 #import "XMGPublishViewController.h"
 #import "UIImage+Image.h"
 #import "XMGTabBar.h"
-
+#import "XMGNavigationViewController.h"
 
 @interface XMGTabBarController ()
 
@@ -100,7 +100,7 @@
 {
     // 精华
     XMGEssenceViewController *essenceVc = [[XMGEssenceViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:essenceVc];
+    XMGNavigationViewController *nav = [[XMGNavigationViewController alloc] initWithRootViewController:essenceVc];
     // initWithRootViewController:push
     
     // tabBarVc:会把第0个子控制器的view添加去
@@ -108,7 +108,7 @@
     
     // 新帖
     XMGNewViewController *newVc = [[XMGNewViewController alloc] init];
-    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:newVc];
+    XMGNavigationViewController *nav1 = [[XMGNavigationViewController alloc] initWithRootViewController:newVc];
     // tabBarVc:会把第0个子控制器的view添加去
     [self addChildViewController:nav1];
     
@@ -119,7 +119,7 @@
     
     // 关注
     XMGFriendTrendViewController *ftVc = [[XMGFriendTrendViewController alloc] init];
-    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:ftVc];
+    XMGNavigationViewController *nav3 = [[XMGNavigationViewController alloc] initWithRootViewController:ftVc];
     // initWithRootViewController:push
     
     // tabBarVc:会把第0个子控制器的view添加去
@@ -127,7 +127,7 @@
     
     // 我
     XMGMeViewController *meVc = [[XMGMeViewController alloc] init];
-    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:meVc];
+    XMGNavigationViewController *nav4 = [[XMGNavigationViewController alloc] initWithRootViewController:meVc];
     // initWithRootViewController:push
     
     // tabBarVc:会把第0个子控制器的view添加去
@@ -139,7 +139,7 @@
 - (void)setupAllTitleButton
 {
     // 0:nav
-    UINavigationController *nav = self.childViewControllers[0];
+    XMGNavigationViewController *nav = self.childViewControllers[0];
     nav.tabBarItem.title = @"精华";
     nav.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
     //快速生成一个没有渲染图片
@@ -148,7 +148,7 @@
    // nav.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
     
     // 1:新帖
-    UINavigationController *nav1 = self.childViewControllers[1];
+    XMGNavigationViewController *nav1 = self.childViewControllers[1];
     nav1.tabBarItem.title = @"新帖";
     nav1.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
    // nav1.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
@@ -161,14 +161,14 @@
 //    publishVc.tabBarItem.selectedImage = [UIImage imageOriginaWithName:@"tabBar_publish_click_icon"];
     
     // 3.关注
-    UINavigationController *nav3 = self.childViewControllers[2];
+    XMGNavigationViewController *nav3 = self.childViewControllers[2];
     nav3.tabBarItem.title = @"关注";
     nav3.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
     //nav3.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
     nav3.tabBarItem.selectedImage = [UIImage imageOriginaWithName:@"tabBar_friendTrends_icon"];
     
     // 4.我
-    UINavigationController *nav4 = self.childViewControllers[3];
+    XMGNavigationViewController *nav4 = self.childViewControllers[3];
     nav4.tabBarItem.title = @"我";
     nav4.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
     //nav4.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];

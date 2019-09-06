@@ -7,18 +7,22 @@
 //
 
 #import "AppDelegate.h"
-//#import "XMGEssenceViewController.h"
-//#import "XMGFriendTrendViewController.h"
-//#import "XMGMeViewController.h"
-//#import "XMGNewViewController.h"
-//#import "XMGPublishViewController.h"
 #import "XMGTabBarController.h"
+#import "XMGAdViewController.h"
 @interface AppDelegate ()
 
 @end
 /*
  项目架构(结构)搭建:主流结构(UITabBarController + 导航控制器)
  ->项目开发方式1.storyboard 2.纯代码
+ */
+
+//每次程序启动的时候进入广告界面
+//1.在启动的时候,去加个广告界面
+//2.启动完成的时候,加个广告界面(展示启动图片)
+/*
+ 1.程序已启动就进入广告界面,窗口的根控制器设置为广告控制器
+ 2.直接往窗口上再加上一个广告界面,等几秒过去了,在去广告界面移除(这个方法比较繁琐)
  */
 @implementation AppDelegate
 //自定义类:1.可以管理自己的业务
@@ -30,8 +34,10 @@
    //1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //2.设置窗口根控制器
-    XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
-    self.window.rootViewController =tabBarVc;
+    //XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
+     XMGAdViewController *adVc = [[XMGAdViewController alloc]init];
+    self.window.rootViewController =adVc;
+    //self.window.rootViewController =tabBarVc;
     
 
     

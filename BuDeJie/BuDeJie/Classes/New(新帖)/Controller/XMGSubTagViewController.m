@@ -1,87 +1,28 @@
 //
-//  XMGMeViewController.m
+//  XMGSubTagViewController.m
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/3.
+//  Created by mushroom on 2019/9/6.
 //  Copyright © 2019 xiaomage. All rights reserved.
 //
 
-#import "XMGMeViewController.h"
-#import "XMGSettingViewController.h"
+#import "XMGSubTagViewController.h"
 
-
-@interface XMGMeViewController ()
+@interface XMGSubTagViewController ()
 
 @end
 
-@implementation XMGMeViewController
-
-/*
- 搭建基本结构->设置底部条 ->设置顶部条 ->设置顶部条标题字体->处理导航控制器业务逻辑(跳转)
- */
+@implementation XMGSubTagViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupNavBar];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
-
-//设置导航条
--(void)setupNavBar
-{
-    //左边按钮
-   // self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"MainTagSubIcon"] highImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(tagClick)];
-    
-    //设置
-    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
-    //夜间模型
-    UIBarButtonItem *nightItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
-    
-    //右边按钮
-    self.navigationItem.rightBarButtonItems =@[settingItem,nightItem];
-    
-    //titleView
-    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    self.navigationItem.title = @"我的";
-    
-    //只要是通过模型设置,都是通过富文本设置
-    //设置导航条标题 =>UINavigationBar
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
-    
-    [self.navigationController.navigationBar setTitleTextAttributes:attrs];
-    
-    
-}
-
-#pragma mark --左边按钮点击事件
--(void)setting
-{
-    XMGFunc;
-    //跳转到设置界面
-    XMGSettingViewController *settingVc = [[XMGSettingViewController alloc] init];
-    //隐藏底部导航栏,必须要在跳转之前设置
-    settingVc.hidesBottomBarWhenPushed = YES;
-    //跳转到指定的controller
-    [self.navigationController pushViewController:settingVc animated:YES];
-    
-    /*
-     1.底部条没有隐藏
-     2.处理返回按钮样式 :1.返回按钮可以上一个控制器或者当前控制器都可以,当前管比较好
-     */
-    
-}
-
--(void)night:(UIButton *)button
-{
-    button.selected = !button.selected;
-     XMGFunc;
-}
-
-
-
-
 
 #pragma mark - Table view data source
 

@@ -39,6 +39,9 @@
 -(void)tagClick
 {
     XMGFunc;
+    //进入推荐标签界面
+    self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>
+    
 }
 
 @end

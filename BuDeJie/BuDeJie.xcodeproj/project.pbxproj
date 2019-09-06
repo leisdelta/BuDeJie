@@ -3,14 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238382FF42BB638EBC383B36 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82375D6CDEE63F611B787754 /* libPods-BuDeJie.a */; };
+		AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB339BF623209448009BD276 /* XMGAdViewController.m */; };
+		AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB339BF82320962A009BD276 /* XMGAdViewController.xib */; };
+		AB339C0223209DE8009BD276 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFB23209DE8009BD276 /* LaunchImage@2x.png */; };
+		AB339C0323209DE8009BD276 /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFC23209DE8009BD276 /* LaunchImage-568h@2x.png */; };
+		AB339C0423209DE8009BD276 /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFD23209DE8009BD276 /* LaunchImage-800-667h@2x.png */; };
+		AB339C0523209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFE23209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png */; };
+		AB339C0623209DE8009BD276 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFF23209DE8009BD276 /* LaunchImage-700@2x.png */; };
+		AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0023209DE8009BD276 /* LaunchImage-700-568h@2x.png */; };
+		AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0123209DE8009BD276 /* LaunchImage.png */; };
+		AB842646232103520098CC9C /* XMGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842645232103520098CC9C /* XMGADItem.m */; };
+		AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842648232202520098CC9C /* XMGSubTagViewController.m */; };
 		ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C04231F350F00410F9E /* XMGTabBar.m */; };
 		ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C07231F58CE00410F9E /* UIView+Frame.m */; };
 		ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */; };
 		ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */; };
+		ABB08C19231FED8300410F9E /* XMGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C18231FED8300410F9E /* XMGSettingViewController.m */; };
 		ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF1231E14F400E425BB /* Main.storyboard */; };
 		ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF4231E14F500E425BB /* Assets.xcassets */; };
 		ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF6231E14F500E425BB /* LaunchScreen.storyboard */; };
@@ -37,6 +50,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24E98BB53209AEC433D8E44F /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
+		7EE2145DA64B8291F7200D3F /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		82375D6CDEE63F611B787754 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB339BF523209448009BD276 /* XMGAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGAdViewController.h; sourceTree = "<group>"; };
+		AB339BF623209448009BD276 /* XMGAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGAdViewController.m; sourceTree = "<group>"; };
+		AB339BF82320962A009BD276 /* XMGAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGAdViewController.xib; sourceTree = "<group>"; };
+		AB339BFB23209DE8009BD276 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		AB339BFC23209DE8009BD276 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		AB339BFD23209DE8009BD276 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		AB339BFE23209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		AB339BFF23209DE8009BD276 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		AB339C0023209DE8009BD276 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		AB339C0123209DE8009BD276 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		AB842644232103520098CC9C /* XMGADItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGADItem.h; sourceTree = "<group>"; };
+		AB842645232103520098CC9C /* XMGADItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGADItem.m; sourceTree = "<group>"; };
+		AB842647232202520098CC9C /* XMGSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagViewController.h; sourceTree = "<group>"; };
+		AB842648232202520098CC9C /* XMGSubTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagViewController.m; sourceTree = "<group>"; };
 		ABB08C03231F350F00410F9E /* XMGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		ABB08C04231F350F00410F9E /* XMGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 		ABB08C06231F58CE00410F9E /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -46,6 +76,8 @@
 		ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		ABB08C10231FE2F100410F9E /* XMGNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGNavigationViewController.h; sourceTree = "<group>"; };
 		ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationViewController.m; sourceTree = "<group>"; };
+		ABB08C17231FED8300410F9E /* XMGSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSettingViewController.h; sourceTree = "<group>"; };
+		ABB08C18231FED8300410F9E /* XMGSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSettingViewController.m; sourceTree = "<group>"; };
 		ABF63DE8231E14F400E425BB /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF63DF2231E14F400E425BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABF63DF4231E14F500E425BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238382FF42BB638EBC383B36 /* libPods-BuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,12 +124,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		322C4A00B0F9B290A7179586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EE2145DA64B8291F7200D3F /* Pods-BuDeJie.debug.xcconfig */,
+				24E98BB53209AEC433D8E44F /* Pods-BuDeJie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9483ABCE784566182E371D3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82375D6CDEE63F611B787754 /* libPods-BuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB339BF1232093FA009BD276 /* AD(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				AB339BF2232093FA009BD276 /* Controller */,
+				AB339BF3232093FA009BD276 /* Model */,
+				AB339BF4232093FA009BD276 /* View */,
+			);
+			path = "AD(广告)";
+			sourceTree = "<group>";
+		};
+		AB339BF2232093FA009BD276 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB339BF523209448009BD276 /* XMGAdViewController.h */,
+				AB339BF623209448009BD276 /* XMGAdViewController.m */,
+				AB339BF82320962A009BD276 /* XMGAdViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB339BF3232093FA009BD276 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB842644232103520098CC9C /* XMGADItem.h */,
+				AB842645232103520098CC9C /* XMGADItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB339BF4232093FA009BD276 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB339BFA23209DE8009BD276 /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				AB339BFB23209DE8009BD276 /* LaunchImage@2x.png */,
+				AB339BFC23209DE8009BD276 /* LaunchImage-568h@2x.png */,
+				AB339BFD23209DE8009BD276 /* LaunchImage-800-667h@2x.png */,
+				AB339BFE23209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png */,
+				AB339BFF23209DE8009BD276 /* LaunchImage-700@2x.png */,
+				AB339C0023209DE8009BD276 /* LaunchImage-700-568h@2x.png */,
+				AB339C0123209DE8009BD276 /* LaunchImage.png */,
+			);
+			path = "启动图片";
+			sourceTree = "<group>";
+		};
+		ABB08C13231FECA200410F9E /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				ABB08C14231FECA200410F9E /* Controller */,
+				ABB08C15231FECA200410F9E /* Model */,
+				ABB08C16231FECA200410F9E /* View */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		ABB08C14231FECA200410F9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABB08C17231FED8300410F9E /* XMGSettingViewController.h */,
+				ABB08C18231FED8300410F9E /* XMGSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABB08C15231FECA200410F9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABB08C16231FECA200410F9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ABF63DDF231E14F400E425BB = {
 			isa = PBXGroup;
 			children = (
 				ABF63DEA231E14F400E425BB /* BuDeJie */,
 				ABF63E03231E14F500E425BB /* BuDeJieUITests */,
 				ABF63DE9231E14F400E425BB /* Products */,
+				322C4A00B0F9B290A7179586 /* Pods */,
+				9483ABCE784566182E371D3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +247,7 @@
 		ABF63DEA231E14F400E425BB /* BuDeJie */ = {
 			isa = PBXGroup;
 			children = (
+				AB339BFA23209DE8009BD276 /* 启动图片 */,
 				ABF63E0F231E57B200E425BB /* Classes */,
 				ABF63DF1231E14F400E425BB /* Main.storyboard */,
 				ABF63DF4231E14F500E425BB /* Assets.xcassets */,
@@ -133,6 +269,8 @@
 		ABF63E0F231E57B200E425BB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AB339BF1232093FA009BD276 /* AD(广告) */,
+				ABB08C13231FECA200410F9E /* Setting(设置) */,
 				ABF63E39231E8AEA00E425BB /* Main(主要) */,
 				ABF63E10231E57B200E425BB /* Essence(精华) */,
 				ABF63E1C231E57B200E425BB /* FriendTrend(关注) */,
@@ -204,6 +342,8 @@
 			children = (
 				ABF63E33231E593C00E425BB /* XMGNewViewController.h */,
 				ABF63E34231E593C00E425BB /* XMGNewViewController.m */,
+				AB842647232202520098CC9C /* XMGSubTagViewController.h */,
+				AB842648232202520098CC9C /* XMGSubTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,9 +518,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABF63E09231E14F500E425BB /* Build configuration list for PBXNativeTarget "BuDeJie" */;
 			buildPhases = (
+				4B838F3D7E467621BCCF09AA /* [CP] Check Pods Manifest.lock */,
 				ABF63DE4231E14F400E425BB /* Sources */,
 				ABF63DE5231E14F400E425BB /* Frameworks */,
 				ABF63DE6231E14F400E425BB /* Resources */,
+				04AAE090D66DA298B289184C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -452,9 +594,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */,
 				ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */,
 				ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */,
 				ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */,
+				AB339C0523209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				AB339C0323209DE8009BD276 /* LaunchImage-568h@2x.png in Resources */,
+				AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */,
+				AB339C0623209DE8009BD276 /* LaunchImage-700@2x.png in Resources */,
+				AB339C0423209DE8009BD276 /* LaunchImage-800-667h@2x.png in Resources */,
+				AB339C0223209DE8009BD276 /* LaunchImage@2x.png in Resources */,
+				AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +617,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04AAE090D66DA298B289184C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BuDeJie/Pods-BuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B838F3D7E467621BCCF09AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuDeJie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABF63DE4231E14F400E425BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -475,10 +667,14 @@
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
 				ABF63E32231E591200E425BB /* XMGMeViewController.m in Sources */,
 				ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */,
+				AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */,
 				ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */,
 				ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */,
 				ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */,
+				AB842646232103520098CC9C /* XMGADItem.m in Sources */,
+				ABB08C19231FED8300410F9E /* XMGSettingViewController.m in Sources */,
 				ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */,
+				AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */,
 				ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */,
 				ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */,
 				ABF63E2F231E58DF00E425BB /* XMGFriendTrendViewController.m in Sources */,
@@ -642,6 +838,7 @@
 		};
 		ABF63E0A231E14F500E425BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE2145DA64B8291F7200D3F /* Pods-BuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -660,6 +857,7 @@
 		};
 		ABF63E0B231E14F500E425BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E98BB53209AEC433D8E44F /* Pods-BuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
