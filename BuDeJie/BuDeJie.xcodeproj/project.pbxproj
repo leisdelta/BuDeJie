@@ -19,6 +19,10 @@
 		AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0123209DE8009BD276 /* LaunchImage.png */; };
 		AB842646232103520098CC9C /* XMGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842645232103520098CC9C /* XMGADItem.m */; };
 		AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842648232202520098CC9C /* XMGSubTagViewController.m */; };
+		AB84264C23224F650098CC9C /* XMGSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264B23224F650098CC9C /* XMGSubTagItem.m */; };
+		AB84265023225C600098CC9C /* XMGSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264E23225C600098CC9C /* XMGSubTagCell.m */; };
+		AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB84264F23225C600098CC9C /* XMGSubTagCell.xib */; };
+		AB8426542322A9C80098CC9C /* UIImage+Antialias.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8426522322A9C80098CC9C /* UIImage+Antialias.m */; };
 		ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C04231F350F00410F9E /* XMGTabBar.m */; };
 		ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C07231F58CE00410F9E /* UIView+Frame.m */; };
 		ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */; };
@@ -67,6 +71,13 @@
 		AB842645232103520098CC9C /* XMGADItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGADItem.m; sourceTree = "<group>"; };
 		AB842647232202520098CC9C /* XMGSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagViewController.h; sourceTree = "<group>"; };
 		AB842648232202520098CC9C /* XMGSubTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagViewController.m; sourceTree = "<group>"; };
+		AB84264A23224F650098CC9C /* XMGSubTagItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagItem.h; sourceTree = "<group>"; };
+		AB84264B23224F650098CC9C /* XMGSubTagItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagItem.m; sourceTree = "<group>"; };
+		AB84264D23225C600098CC9C /* XMGSubTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagCell.h; sourceTree = "<group>"; };
+		AB84264E23225C600098CC9C /* XMGSubTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagCell.m; sourceTree = "<group>"; };
+		AB84264F23225C600098CC9C /* XMGSubTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGSubTagCell.xib; sourceTree = "<group>"; };
+		AB8426522322A9C80098CC9C /* UIImage+Antialias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Antialias.m"; sourceTree = "<group>"; };
+		AB8426532322A9C80098CC9C /* UIImage+Antialias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Antialias.h"; sourceTree = "<group>"; };
 		ABB08C03231F350F00410F9E /* XMGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		ABB08C04231F350F00410F9E /* XMGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 		ABB08C06231F58CE00410F9E /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -351,6 +362,8 @@
 		ABF63E1A231E57B200E425BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB84264A23224F650098CC9C /* XMGSubTagItem.h */,
+				AB84264B23224F650098CC9C /* XMGSubTagItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +371,9 @@
 		ABF63E1B231E57B200E425BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB84264D23225C600098CC9C /* XMGSubTagCell.h */,
+				AB84264E23225C600098CC9C /* XMGSubTagCell.m */,
+				AB84264F23225C600098CC9C /* XMGSubTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,6 +517,8 @@
 		ABF63E40231E8FCA00E425BB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AB8426532322A9C80098CC9C /* UIImage+Antialias.h */,
+				AB8426522322A9C80098CC9C /* UIImage+Antialias.m */,
 				ABF63E41231E912500E425BB /* UIImage+Image.h */,
 				ABF63E42231E912500E425BB /* UIImage+Image.m */,
 				ABB08C06231F58CE00410F9E /* UIView+Frame.h */,
@@ -598,6 +616,7 @@
 				ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */,
 				ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */,
 				ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */,
+				AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */,
 				AB339C0523209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				AB339C0323209DE8009BD276 /* LaunchImage-568h@2x.png in Resources */,
 				AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -664,15 +683,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8426542322A9C80098CC9C /* UIImage+Antialias.m in Sources */,
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
 				ABF63E32231E591200E425BB /* XMGMeViewController.m in Sources */,
 				ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */,
+				AB84265023225C600098CC9C /* XMGSubTagCell.m in Sources */,
 				AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */,
 				ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */,
 				ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */,
 				ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */,
 				AB842646232103520098CC9C /* XMGADItem.m in Sources */,
 				ABB08C19231FED8300410F9E /* XMGSettingViewController.m in Sources */,
+				AB84264C23224F650098CC9C /* XMGSubTagItem.m in Sources */,
 				ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */,
 				AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */,
 				ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */,

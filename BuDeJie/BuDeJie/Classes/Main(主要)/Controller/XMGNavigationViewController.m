@@ -61,8 +61,10 @@
     if(self.childViewControllers.count >0){//非根控制器
         //设置导航条左边按钮
         //恢复滑动返回功能->分析:把系统的返回按钮覆盖 ->1.手势失效(1.手势被清空 2.可能手势代理做了一些事情,导致手势失效)
-        self.navigationItem.leftBarButtonItem =  [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
+        viewController.hidesBottomBarWhenPushed = YES;
         
+        self.navigationItem.leftBarButtonItem =  [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
+    
     }
    
     //真正的跳转

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ad</key>
+	<array>
+		<dict>
+			<key>act</key>
+			<integer>1</integer>
+			<key>adtd</key>
+			<integer>3</integer>
+			<key>buyer</key>
+			<integer>4</integer>
+			<key>closetype</key>
+			<integer>4</integer>
+			<key>curl</key>
+			<string>http://cpro.baidu.com/cpro/ui/uijs.php?en=mywWUA71T1YYPBu9TZKxpyfqn1T4PWnLnHfzriu9TZKxTv-b5yRzPj6sPvRdFhPC5H0huAbqnH0YrjRLPBuGuAu95Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuGuAu9gvPs5H0hpgPxmgKs5HDhph_qmWNbmvFhujT3uARvnjFWPBuo5iNaniNaniNafzNKfBNDnzNjfiNjnBNDPBNjnBNjnzNDnzNjwiuonjY-fWD-fWD-fbn-fRc-wjn-fYD-f1c-wjm-f1c-f1n-wjn-fYRhUZNopHYkFhdWTAYqnHR3PBuET1dGULnhTHd-nWf3njI-PNqWTZchThcqniuzT1YkFMPbpdqv5HchTvwogLu-TMPGUv3qnz3vnzu1uyk_ugFxpyfqnBu1pyfqm1msnhRvrAwbPvFhuAPBPiu1IA-b5HmsnHDhIjdYTAP_pyPouyf1gvdEm-q9TLKxnzuYUgnqnHRvP1mLrHRYriuYIHYznj03rjbzFMRqpZwYTaR1fiRzwBRzwWwBuAcYmiRzwaRzwARzPj6sPvRdFHF7mvqVFMNGUy-b5Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuv5HchpHdBPjm4uhNhPs&amp;adx=1&amp;c=news&amp;cf=1&amp;cp=chuilei_middle_page_app&amp;cvrq=361703&amp;ds=cmp&amp;eid_list=106231_106236_106240_1065_1060_1093_106506_106522_106544_1016_1013_1086_106586_1032&amp;expid=6240_6275_6280_6522_6596_12414_12415_202735_202992_206574&amp;fv=0&amp;img_typ=0&amp;itm=0&amp;k_words=%C4%CF%BC%AB%D3%CA%C2%D6%C2%C3%D3%CE%5F%B1%B1%BC%AB%D3%CA%C2%D6%5F%C2%C3%D3%CE%D3%CA%C2%D6%5F%C2%C3%D3%CE%D3%CA%C2%D6%5F%B8%E8%CA%AB%B4%EF%D3%CA%C2%D6%C2%C3%D3%CE%5F%C2%C3%D3%CE%D3%CA%C2%D6&amp;kdi0=1048576&amp;lu_idc=yf&amp;lukid=1&amp;lus=c602e68dd7bfdcb5&amp;lust=5d70e43d&amp;mscf=0&amp;mtids=2920000001&amp;n=10&amp;nttp=3&amp;p=baidu&amp;sh=1334&amp;ssp2=0&amp;sw=750&amp;swi=1&amp;tsf=dtp:2&amp;u=&amp;uicf=lurecv&amp;urlid=0&amp;vn=3&amp;wi=4</string>
+			<key>id</key>
+			<integer>0</integer>
+			<key>mimetype</key>
+			<string>image/jpg</string>
+			<key>qk</key>
+			<string>b5dcbfd78de602c6</string>
+			<key>type</key>
+			<string>image</string>
+			<key>w_picurl</key>
+			<string>http://aod-image.baidu.com/5/pic/ed2bb52058b6525f393e74fc59e54fb6.png</string>
+			<key>winurl</key>
+			<string>http://wn.pos.baidu.com/adx.php?c=d25pZD1jNjAyZTY4ZGQ3YmZkY2I1AHM9YzYwMmU2OGRkN2JmZGNiNQB0PTE1Njc2Nzk1NDkAc2U9MgBidT00AHByaWNlPVhYRGtQUUFOLXZaN2pFcGdXNUlBOHRlU3FFVTdPTWpoc1dGX3N3AGNoYXJnZV9wcmljZT0xMjcAc2hhcmluZ19wcmljZT0xMjcwMDAAd2luX2RzcD00AGNobWQ9MQBiZGlkPQBjcHJvaWQ9AHdkPTAAdHU9MjAwODg5MgBhZGNsYXNzPTQ2AHNyY3Q9MgBwb3M9MABsb2M9MQBlaWQ9MABiY2htZD0wAHRtPTI2ODg5OTg4NABhcHA9ZTI0ODA3ZTUAdj0xAGk9OTdmMzllMTY</string>
+		</dict>
+	</array>
+	<key>ext_style</key>
+	<string>{"iteBCA":"#5998fe,#bfd7ff,#bfd7ff,#bfd7ff,#bfd7ff,#bfd7ff,#bfd7ff,#bfd7ff,#bfd7ff,#bfd7ff","renderer":""}</string>
+	<key>iap_buy</key>
+	<integer>0</integer>
+	<key>n</key>
+	<integer>1</integer>
+</dict>
+</plist>

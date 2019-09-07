@@ -7,6 +7,8 @@
 //
 
 #import "XMGNewViewController.h"
+#import "XMGSubTagViewController.h"
+
 
 @interface XMGNewViewController ()
 
@@ -40,7 +42,8 @@
 {
     XMGFunc;
     //进入推荐标签界面
-    self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>
+    XMGSubTagViewController *subTag = [[XMGSubTagViewController alloc]init];
+    [self.navigationController pushViewController:subTag animated:YES];
     
 }
 
