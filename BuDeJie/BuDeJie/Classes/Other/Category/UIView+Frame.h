@@ -15,10 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (Frame)
 
 @property CGFloat xmg_width;
-
 @property CGFloat xmg_height;
 @property CGFloat xmg_x;
 @property CGFloat xmg_y;
+@property CGFloat xmg_centerX;
+@property CGFloat xmg_centerY;
 @end
 
 NS_ASSUME_NONNULL_END

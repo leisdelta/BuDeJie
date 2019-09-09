@@ -17,7 +17,7 @@
 
 #import "UIView+Frame.h"
 #import "UIBarButtonItem+Item.h"
-
+#define XMGColor(r,g,b) [UIColor colorWithRed:(r)/256.0 green:(g)/256.0 blue:(b)/256.0 alpha:1]
 
 /***********屏幕适配*************/
 #define XMGScreenW [UIScreen mainScreen].bounds.size.width

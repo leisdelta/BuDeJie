@@ -2,16 +2,12 @@
 //  XMGMeViewController.h
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/3.
-//  Copyright © 2019 xiaomage. All rights reserved.
+//  Created by xiaomage on 16/3/11.
+//  Copyright © 2016年 小码哥. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface XMGMeViewController : UITableViewController
 
 @end
-
-NS_ASSUME_NONNULL_END

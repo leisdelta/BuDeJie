@@ -11,12 +11,15 @@
 #import "XMGSubTagItem.h"
 #import <MJExtension/MJExtension.h>
 #import "XMGSubTagCell.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+
 @interface XMGSubTagViewController ()
 
 /**数据数组*/
 @property (nonatomic,strong) NSArray *subTags;
 
-
+/**请求方式全局*/
+@property (nonatomic,weak) AFHTTPSessionManager *mgr;
 @end
 
 @implementation XMGSubTagViewController
@@ -35,20 +38,37 @@ static NSString * const ID = @"subTagCell";
     self.title = @"推荐标签";
     
     
-    //处理cell分割线 1.自定义分割线2.系统属性
+    //处理cell分割线 1.自定义分割线2.系统属性 3.万能方式(重写cell的setFrame)了解tableView底层实现了了解1.取消系统自带分割线2.把tableView背景色设置为分割线的先背景色3.重写setFrame
     //清空tableView分割线内边距 清空cell的约束边缘
-    self.tableView.separatorInset = UIEdgeInsetsZero;
+    //self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    //220 220 221
+    self.tableView.backgroundColor =XMGColor(220, 220, 221);
     
-    
+   // self.tableView.backgroundColor =[UIColor colorWithRed:(220)/256.0 green:(220)/256.0 blue:(221)/256.0 alpha:1];
+    //提示用户当前正在加载数据 SVPro
+    [SVProgressHUD showWithStatus:@"正在加载ing......."];
     
     
 }
+
+//界面消失调用
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    //销毁之前,调用svp的dismiss结束提示旋转
+    [SVProgressHUD dismiss];
+    //取消之前的请求
+    
+     [_mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+}
+
 #pragma mar -请求数据
 -(void)loadData
 {
     //1.创建请求会话管理者
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-    
+    _mgr = mgr;
     mgr.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     //2.拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
@@ -56,26 +76,37 @@ static NSString * const ID = @"subTagCell";
     parameters[@"action"] = @"sub";
     parameters[@"c"] = @"topic";
     //3.发送请求
-    [mgr GET:@"http://api.budejie.com/api/api_open.php"  parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *  _Nullable responseObject) {
-        //NSLog(@"新帖数据responseObject---------%@",responseObject);
-        //写入到文件中
-        [responseObject writeToFile:@"/Users/lei/Desktop/GitHub/BuDeJie/BuDeJie/BuDeJie/Classes/New\(新帖\)/View/tag.plist" atomically:YES];
-        //把字典转化为模型
+    //延迟发送的效果显示
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [mgr GET:@"http://api.budejie.com/api/api_open.php"  parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *  _Nullable responseObject) {
+            //NSLog(@"新帖数据responseObject---------%@",responseObject);
+            
+            [SVProgressHUD dismiss];
+            //写入到文件中
+            [responseObject writeToFile:@"/Users/lei/Desktop/GitHub/BuDeJie/BuDeJie/BuDeJie/Classes/New\(新帖\)/View/tag.plist" atomically:YES];
+            //把字典转化为模型
+            
+            
+            _subTags =  [XMGSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
+            //NSLog(@"获取遍历出来的的数据----------------------%@",self.subTags[0]);
+            //        for(int i =0;i<_subTags.count;i++){
+            //           XMGSubTagItem *tag = _subTags[i];
+            //           // NSLog(@"遍历结果显示 %@",tag.theme_name);
+            //        }
+            //刷新表格
+            [self.tableView reloadData];
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"新帖数据error-----%@",error);
+            [SVProgressHUD dismiss];
+        }];
         
         
-       _subTags =  [XMGSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
-        //NSLog(@"获取遍历出来的的数据----------------------%@",self.subTags[0]);
-//        for(int i =0;i<_subTags.count;i++){
-//           XMGSubTagItem *tag = _subTags[i];
-//           // NSLog(@"遍历结果显示 %@",tag.theme_name);
-//        }
-        //刷新表格
-        [self.tableView reloadData];
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"新帖数据error-----%@",error);
-    }];
+    });
+    
+    
 }
 
 

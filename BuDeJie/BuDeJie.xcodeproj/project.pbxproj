@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		238382FF42BB638EBC383B36 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82375D6CDEE63F611B787754 /* libPods-BuDeJie.a */; };
+		AB071F43232382450023F9E8 /* XMGFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB071F42232382450023F9E8 /* XMGFriendTrendViewController.xib */; };
+		AB071F46232394C50023F9E8 /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB071F45232394C50023F9E8 /* XMGLoginRegisterViewController.m */; };
+		AB071F48232395EB0023F9E8 /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB071F47232395EB0023F9E8 /* XMGLoginRegisterViewController.xib */; };
+		AB071F4E23239CE10023F9E8 /* XMGLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB071F4D23239CE10023F9E8 /* XMGLoginRegisterView.m */; };
+		AB071F5023239CF10023F9E8 /* XMGLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB071F4F23239CF10023F9E8 /* XMGLoginRegisterView.xib */; };
+		AB167B42232484A0000FBFC8 /* XMGFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B3D2324849E000FBFC8 /* XMGFastLoginView.m */; };
+		AB167B43232484A0000FBFC8 /* XMGFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB167B40232484A0000FBFC8 /* XMGFastLoginView.xib */; };
+		AB167B44232484A0000FBFC8 /* XMGFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B41232484A0000FBFC8 /* XMGFastButton.m */; };
+		AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B462324FAF2000FBFC8 /* XMGLoginField.m */; };
+		AB167B4A2324FB31000FBFC8 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B492324FB30000FBFC8 /* UITextField+Placeholder.m */; };
 		AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB339BF623209448009BD276 /* XMGAdViewController.m */; };
 		AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB339BF82320962A009BD276 /* XMGAdViewController.xib */; };
 		AB339C0223209DE8009BD276 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFB23209DE8009BD276 /* LaunchImage@2x.png */; };
@@ -27,7 +37,15 @@
 		ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C07231F58CE00410F9E /* UIView+Frame.m */; };
 		ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */; };
 		ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */; };
-		ABB08C19231FED8300410F9E /* XMGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C18231FED8300410F9E /* XMGSettingViewController.m */; };
+		ABE4B2F32325CF410016463D /* XMGSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE4B2E72325CF400016463D /* XMGSquareCell.xib */; };
+		ABE4B2F42325CF410016463D /* XMGSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B2E82325CF400016463D /* XMGSquareCell.m */; };
+		ABE4B2F52325CF410016463D /* XMGSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B2EB2325CF400016463D /* XMGSquareItem.m */; };
+		ABE4B2F62325CF410016463D /* XMGMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE4B2ED2325CF400016463D /* XMGMeViewController.storyboard */; };
+		ABE4B2F72325CF410016463D /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B2EE2325CF400016463D /* XMGMeViewController.m */; };
+		ABE4B2F82325CF410016463D /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B2EF2325CF400016463D /* XMGWebViewController.m */; };
+		ABE4B2F92325CF410016463D /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE4B2F12325CF400016463D /* XMGWebViewController.xib */; };
+		ABE4B30123264F530016463D /* XMGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B30023264F520016463D /* XMGFileTool.m */; };
+		ABE4B30423264FBC0016463D /* XMGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B30323264FBC0016463D /* XMGSettingViewController.m */; };
 		ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF1231E14F400E425BB /* Main.storyboard */; };
 		ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF4231E14F500E425BB /* Assets.xcassets */; };
 		ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF6231E14F500E425BB /* LaunchScreen.storyboard */; };
@@ -36,7 +54,6 @@
 		ABF63E29231E57B300E425BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E17231E57B200E425BB /* AppDelegate.m */; };
 		ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E2B231E587B00E425BB /* XMGEssenceViewController.m */; };
 		ABF63E2F231E58DF00E425BB /* XMGFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E2E231E58DF00E425BB /* XMGFriendTrendViewController.m */; };
-		ABF63E32231E591200E425BB /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E31231E591200E425BB /* XMGMeViewController.m */; };
 		ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E34231E593C00E425BB /* XMGNewViewController.m */; };
 		ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E37231E596200E425BB /* XMGPublishViewController.m */; };
 		ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */; };
@@ -57,6 +74,22 @@
 		24E98BB53209AEC433D8E44F /* Pods-BuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.release.xcconfig"; path = "Target Support Files/Pods-BuDeJie/Pods-BuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 		7EE2145DA64B8291F7200D3F /* Pods-BuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJie.debug.xcconfig"; path = "Target Support Files/Pods-BuDeJie/Pods-BuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 		82375D6CDEE63F611B787754 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB071F42232382450023F9E8 /* XMGFriendTrendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGFriendTrendViewController.xib; sourceTree = "<group>"; };
+		AB071F44232394C50023F9E8 /* XMGLoginRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterViewController.h; sourceTree = "<group>"; };
+		AB071F45232394C50023F9E8 /* XMGLoginRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterViewController.m; sourceTree = "<group>"; };
+		AB071F47232395EB0023F9E8 /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		AB071F4C23239CE10023F9E8 /* XMGLoginRegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterView.h; sourceTree = "<group>"; };
+		AB071F4D23239CE10023F9E8 /* XMGLoginRegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterView.m; sourceTree = "<group>"; };
+		AB071F4F23239CF10023F9E8 /* XMGLoginRegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGLoginRegisterView.xib; sourceTree = "<group>"; };
+		AB167B3D2324849E000FBFC8 /* XMGFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFastLoginView.m; sourceTree = "<group>"; };
+		AB167B3E2324849F000FBFC8 /* XMGFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFastLoginView.h; sourceTree = "<group>"; };
+		AB167B3F2324849F000FBFC8 /* XMGFastButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFastButton.h; sourceTree = "<group>"; };
+		AB167B40232484A0000FBFC8 /* XMGFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFastLoginView.xib; sourceTree = "<group>"; };
+		AB167B41232484A0000FBFC8 /* XMGFastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFastButton.m; sourceTree = "<group>"; };
+		AB167B452324FAF2000FBFC8 /* XMGLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginField.h; sourceTree = "<group>"; };
+		AB167B462324FAF2000FBFC8 /* XMGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginField.m; sourceTree = "<group>"; };
+		AB167B482324FB30000FBFC8 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
+		AB167B492324FB30000FBFC8 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
 		AB339BF523209448009BD276 /* XMGAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGAdViewController.h; sourceTree = "<group>"; };
 		AB339BF623209448009BD276 /* XMGAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGAdViewController.m; sourceTree = "<group>"; };
 		AB339BF82320962A009BD276 /* XMGAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGAdViewController.xib; sourceTree = "<group>"; };
@@ -87,8 +120,21 @@
 		ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		ABB08C10231FE2F100410F9E /* XMGNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGNavigationViewController.h; sourceTree = "<group>"; };
 		ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationViewController.m; sourceTree = "<group>"; };
-		ABB08C17231FED8300410F9E /* XMGSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSettingViewController.h; sourceTree = "<group>"; };
-		ABB08C18231FED8300410F9E /* XMGSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSettingViewController.m; sourceTree = "<group>"; };
+		ABE4B2E62325CF400016463D /* XMGSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSquareCell.h; sourceTree = "<group>"; };
+		ABE4B2E72325CF400016463D /* XMGSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGSquareCell.xib; sourceTree = "<group>"; };
+		ABE4B2E82325CF400016463D /* XMGSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSquareCell.m; sourceTree = "<group>"; };
+		ABE4B2EA2325CF400016463D /* XMGSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSquareItem.h; sourceTree = "<group>"; };
+		ABE4B2EB2325CF400016463D /* XMGSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSquareItem.m; sourceTree = "<group>"; };
+		ABE4B2ED2325CF400016463D /* XMGMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XMGMeViewController.storyboard; sourceTree = "<group>"; };
+		ABE4B2EE2325CF400016463D /* XMGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeViewController.m; sourceTree = "<group>"; };
+		ABE4B2EF2325CF400016463D /* XMGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWebViewController.m; sourceTree = "<group>"; };
+		ABE4B2F02325CF400016463D /* XMGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeViewController.h; sourceTree = "<group>"; };
+		ABE4B2F12325CF400016463D /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
+		ABE4B2F22325CF400016463D /* XMGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWebViewController.h; sourceTree = "<group>"; };
+		ABE4B2FF23264F520016463D /* XMGFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGFileTool.h; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0316/代码/08-设置/05-BuDeJie(文件管理类完整实现)/BuDeJie/Classes/Tool/File/XMGFileTool.h"; sourceTree = "<group>"; };
+		ABE4B30023264F520016463D /* XMGFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGFileTool.m; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0316/代码/08-设置/05-BuDeJie(文件管理类完整实现)/BuDeJie/Classes/Tool/File/XMGFileTool.m"; sourceTree = "<group>"; };
+		ABE4B30223264FBB0016463D /* XMGSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSettingViewController.h; sourceTree = "<group>"; };
+		ABE4B30323264FBC0016463D /* XMGSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSettingViewController.m; sourceTree = "<group>"; };
 		ABF63DE8231E14F400E425BB /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF63DF2231E14F400E425BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABF63DF4231E14F500E425BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +150,6 @@
 		ABF63E2B231E587B00E425BB /* XMGEssenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceViewController.m; sourceTree = "<group>"; };
 		ABF63E2D231E58DF00E425BB /* XMGFriendTrendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendViewController.h; sourceTree = "<group>"; };
 		ABF63E2E231E58DF00E425BB /* XMGFriendTrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendViewController.m; sourceTree = "<group>"; };
-		ABF63E30231E591200E425BB /* XMGMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGMeViewController.h; sourceTree = "<group>"; };
-		ABF63E31231E591200E425BB /* XMGMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGMeViewController.m; sourceTree = "<group>"; };
 		ABF63E33231E593C00E425BB /* XMGNewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGNewViewController.h; sourceTree = "<group>"; };
 		ABF63E34231E593C00E425BB /* XMGNewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGNewViewController.m; sourceTree = "<group>"; };
 		ABF63E36231E596200E425BB /* XMGPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGPublishViewController.h; sourceTree = "<group>"; };
@@ -215,8 +259,8 @@
 		ABB08C14231FECA200410F9E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ABB08C17231FED8300410F9E /* XMGSettingViewController.h */,
-				ABB08C18231FED8300410F9E /* XMGSettingViewController.m */,
+				ABE4B30223264FBB0016463D /* XMGSettingViewController.h */,
+				ABE4B30323264FBC0016463D /* XMGSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +277,55 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ABE4B2E52325CF400016463D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABE4B2E62325CF400016463D /* XMGSquareCell.h */,
+				ABE4B2E72325CF400016463D /* XMGSquareCell.xib */,
+				ABE4B2E82325CF400016463D /* XMGSquareCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABE4B2E92325CF400016463D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABE4B2EA2325CF400016463D /* XMGSquareItem.h */,
+				ABE4B2EB2325CF400016463D /* XMGSquareItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABE4B2EC2325CF400016463D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABE4B2ED2325CF400016463D /* XMGMeViewController.storyboard */,
+				ABE4B2F02325CF400016463D /* XMGMeViewController.h */,
+				ABE4B2EE2325CF400016463D /* XMGMeViewController.m */,
+				ABE4B2F12325CF400016463D /* XMGWebViewController.xib */,
+				ABE4B2F22325CF400016463D /* XMGWebViewController.h */,
+				ABE4B2EF2325CF400016463D /* XMGWebViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ABE4B2FA232649600016463D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				ABE4B2FB232649600016463D /* File */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		ABE4B2FB232649600016463D /* File */ = {
+			isa = PBXGroup;
+			children = (
+				ABE4B2FF23264F520016463D /* XMGFileTool.h */,
+				ABE4B30023264F520016463D /* XMGFileTool.m */,
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 		ABF63DDF231E14F400E425BB = {
@@ -280,6 +373,7 @@
 		ABF63E0F231E57B200E425BB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ABE4B2FA232649600016463D /* Tool */,
 				AB339BF1232093FA009BD276 /* AD(广告) */,
 				ABB08C13231FECA200410F9E /* Setting(设置) */,
 				ABF63E39231E8AEA00E425BB /* Main(主要) */,
@@ -393,6 +487,10 @@
 			children = (
 				ABF63E2D231E58DF00E425BB /* XMGFriendTrendViewController.h */,
 				ABF63E2E231E58DF00E425BB /* XMGFriendTrendViewController.m */,
+				AB071F42232382450023F9E8 /* XMGFriendTrendViewController.xib */,
+				AB071F44232394C50023F9E8 /* XMGLoginRegisterViewController.h */,
+				AB071F45232394C50023F9E8 /* XMGLoginRegisterViewController.m */,
+				AB071F47232395EB0023F9E8 /* XMGLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -407,6 +505,16 @@
 		ABF63E1F231E57B200E425BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB167B452324FAF2000FBFC8 /* XMGLoginField.h */,
+				AB167B462324FAF2000FBFC8 /* XMGLoginField.m */,
+				AB167B3F2324849F000FBFC8 /* XMGFastButton.h */,
+				AB167B41232484A0000FBFC8 /* XMGFastButton.m */,
+				AB167B3E2324849F000FBFC8 /* XMGFastLoginView.h */,
+				AB167B3D2324849E000FBFC8 /* XMGFastLoginView.m */,
+				AB167B40232484A0000FBFC8 /* XMGFastLoginView.xib */,
+				AB071F4C23239CE10023F9E8 /* XMGLoginRegisterView.h */,
+				AB071F4D23239CE10023F9E8 /* XMGLoginRegisterView.m */,
+				AB071F4F23239CF10023F9E8 /* XMGLoginRegisterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,34 +522,11 @@
 		ABF63E20231E57B200E425BB /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
-				ABF63E21231E57B200E425BB /* Controller */,
-				ABF63E22231E57B200E425BB /* Model */,
-				ABF63E23231E57B200E425BB /* View */,
+				ABE4B2EC2325CF400016463D /* Controller */,
+				ABE4B2E92325CF400016463D /* Model */,
+				ABE4B2E52325CF400016463D /* View */,
 			);
 			path = "Me(我)";
-			sourceTree = "<group>";
-		};
-		ABF63E21231E57B200E425BB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				ABF63E30231E591200E425BB /* XMGMeViewController.h */,
-				ABF63E31231E591200E425BB /* XMGMeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		ABF63E22231E57B200E425BB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		ABF63E23231E57B200E425BB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		ABF63E24231E57B200E425BB /* Publish(发布) */ = {
@@ -517,6 +602,8 @@
 		ABF63E40231E8FCA00E425BB /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AB167B482324FB30000FBFC8 /* UITextField+Placeholder.h */,
+				AB167B492324FB30000FBFC8 /* UITextField+Placeholder.m */,
 				AB8426532322A9C80098CC9C /* UIImage+Antialias.h */,
 				AB8426522322A9C80098CC9C /* UIImage+Antialias.m */,
 				ABF63E41231E912500E425BB /* UIImage+Image.h */,
@@ -612,11 +699,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB071F43232382450023F9E8 /* XMGFriendTrendViewController.xib in Resources */,
 				AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */,
+				ABE4B2F62325CF410016463D /* XMGMeViewController.storyboard in Resources */,
 				ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */,
+				AB167B43232484A0000FBFC8 /* XMGFastLoginView.xib in Resources */,
+				ABE4B2F32325CF410016463D /* XMGSquareCell.xib in Resources */,
 				ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */,
+				AB071F48232395EB0023F9E8 /* XMGLoginRegisterViewController.xib in Resources */,
 				ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */,
 				AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */,
+				ABE4B2F92325CF410016463D /* XMGWebViewController.xib in Resources */,
+				AB071F5023239CF10023F9E8 /* XMGLoginRegisterView.xib in Resources */,
 				AB339C0523209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				AB339C0323209DE8009BD276 /* LaunchImage-568h@2x.png in Resources */,
 				AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -685,22 +779,32 @@
 			files = (
 				AB8426542322A9C80098CC9C /* UIImage+Antialias.m in Sources */,
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
-				ABF63E32231E591200E425BB /* XMGMeViewController.m in Sources */,
+				AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */,
+				AB071F4E23239CE10023F9E8 /* XMGLoginRegisterView.m in Sources */,
+				AB167B4A2324FB31000FBFC8 /* UITextField+Placeholder.m in Sources */,
+				ABE4B2F72325CF410016463D /* XMGMeViewController.m in Sources */,
 				ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */,
 				AB84265023225C600098CC9C /* XMGSubTagCell.m in Sources */,
+				ABE4B2F42325CF410016463D /* XMGSquareCell.m in Sources */,
 				AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */,
+				AB071F46232394C50023F9E8 /* XMGLoginRegisterViewController.m in Sources */,
 				ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */,
 				ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */,
 				ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */,
+				AB167B42232484A0000FBFC8 /* XMGFastLoginView.m in Sources */,
 				AB842646232103520098CC9C /* XMGADItem.m in Sources */,
-				ABB08C19231FED8300410F9E /* XMGSettingViewController.m in Sources */,
 				AB84264C23224F650098CC9C /* XMGSubTagItem.m in Sources */,
 				ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */,
+				AB167B44232484A0000FBFC8 /* XMGFastButton.m in Sources */,
+				ABE4B30123264F530016463D /* XMGFileTool.m in Sources */,
 				AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */,
+				ABE4B2F82325CF410016463D /* XMGWebViewController.m in Sources */,
+				ABE4B30423264FBC0016463D /* XMGSettingViewController.m in Sources */,
 				ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */,
 				ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */,
 				ABF63E2F231E58DF00E425BB /* XMGFriendTrendViewController.m in Sources */,
 				ABF63E28231E57B300E425BB /* main.m in Sources */,
+				ABE4B2F52325CF410016463D /* XMGSquareItem.m in Sources */,
 				ABF63E29231E57B300E425BB /* AppDelegate.m in Sources */,
 				ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */,
 			);

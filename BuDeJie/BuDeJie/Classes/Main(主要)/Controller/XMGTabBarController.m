@@ -125,8 +125,12 @@
     // tabBarVc:会把第0个子控制器的view添加去
     [self addChildViewController:nav3];
     
-    // 我
-    XMGMeViewController *meVc = [[XMGMeViewController alloc] init];
+    // 我(加载storyboarad进行调用)
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:NSStringFromClass([XMGMeViewController class]) bundle:nil];
+    //把storyboard的界面转化成viewcontroller使用,加载箭头指向控制器
+    XMGMeViewController *meVc = [storyboard instantiateInitialViewController];
+    
+   // XMGMeViewController *meVc = [[XMGMeViewController alloc] init];
     XMGNavigationViewController *nav4 = [[XMGNavigationViewController alloc] initWithRootViewController:meVc];
     // initWithRootViewController:push
     
@@ -167,7 +171,7 @@
     //nav3.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
     nav3.tabBarItem.selectedImage = [UIImage imageOriginaWithName:@"tabBar_friendTrends_icon"];
     
-    // 4.我
+    // 4.我(加载storyboarad进行调用)
     XMGNavigationViewController *nav4 = self.childViewControllers[3];
     nav4.tabBarItem.title = @"我";
     nav4.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];

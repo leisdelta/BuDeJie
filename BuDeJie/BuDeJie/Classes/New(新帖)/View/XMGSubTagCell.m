@@ -24,6 +24,14 @@
 @end
 
 @implementation XMGSubTagCell
+
+-(void)setFrame:(CGRect)frame
+{
+   // XMGLog(@"%@",NSStringFromCGRect(frame));
+    frame.size.height -=1;
+    //才是真正给cell复制
+    [super setFrame:frame];
+}
 /*
  头像变成圆角:1.设置头像圆角 2.裁剪图片(生成新的图片->图形上下文才能够生成新的图片)
  处理数字
