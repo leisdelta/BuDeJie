@@ -2,59 +2,105 @@
 //  XMGSettingViewController.m
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/4.
-//  Copyright © 2019 xiaomage. All rights reserved.
+//  Created by xiaomage on 16/3/12.
+//  Copyright © 2016年 小码哥. All rights reserved.
 //
 
 #import "XMGSettingViewController.h"
+#import <SDImageCache.h>
+#import "XMGFileTool.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#define CachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
 @interface XMGSettingViewController ()
-
+@property (nonatomic, assign) NSInteger totalSize;
 @end
 
 @implementation XMGSettingViewController
 
+static NSString * const ID = @"cell";
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+  
+    // 设置导航条左边按钮
+    self.title = @"设置";
     
-    //设置导航条左边按钮
+    // 设置右边
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"jump" style:0 target:self action:@selector(jump)];
     
-   // self.navigationItem.leftBarButtonItem =  [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
     
-//    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [backButton setTitle:@"返回" forState:UIControlStateNormal];
-//    [backButton setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-//    [backButton setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-//    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [backButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-//    [backButton sizeToFit];
-//    backButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
-//    
-//    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    [SVProgressHUD showWithStatus:@"正在计算缓存尺寸...."];
     
-    
-
+    // 获取文件夹尺寸
+    // 文件夹非常小,如果我的文件非常大
+    [XMGFileTool getFileSize:CachePath completion:^(NSInteger totalSize) {
+        
+        _totalSize = totalSize;
+        
+        [self.tableView reloadData];
+        
+        [SVProgressHUD dismiss];
+    }];
 }
 
--(void)back
+- (void)jump
 {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    // 计算缓存数据,计算整个应用程序缓存数据 => 沙盒(Cache) => 获取cache文件夹尺寸
+    
+    // 获取缓存尺寸字符串
+    cell.textLabel.text = [self sizeStr];
+    
+    return cell;
+}
+
+// 点击cell就会调用
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 清空缓存
+    // 删除文件夹里面所有文件
+    [XMGFileTool removeDirectoryPath:CachePath];
+    
+    _totalSize = 0;
+    
+    [self.tableView reloadData];
+}
+
+ // 获取缓存尺寸字符串
+- (NSString *)sizeStr
+{
+    NSInteger totalSize = _totalSize;
+    NSString *sizeStr = @"清除缓存";
+    // MB KB B
+    if (totalSize > 1000 * 1000) {
+        // MB
+        CGFloat sizeF = totalSize / 1000.0 / 1000.0;
+        sizeStr = [NSString stringWithFormat:@"%@(%.1fMB)",sizeStr,sizeF];
+    } else if (totalSize > 1000) {
+        // KB
+        CGFloat sizeF = totalSize / 1000.0;
+        sizeStr = [NSString stringWithFormat:@"%@(%.1fKB)",sizeStr,sizeF];
+    } else if (totalSize > 0) {
+        // B
+        sizeStr = [NSString stringWithFormat:@"%@(%.ldB)",sizeStr,totalSize];
+    }
+
+    return sizeStr;
+}
 
 @end
