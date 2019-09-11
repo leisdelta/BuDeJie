@@ -23,10 +23,17 @@
 
 - (void)setItem:(XMGSquareItem *)item
 {
-    _item = item;
+//    _item = item;
+//    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.icon]];
+//    _nameView.text = item.name;
+    if ([item isKindOfClass:[XMGSquareItem class]]) {
+        [_iconView sd_setImageWithURL:[NSURL URLWithString:item.icon]];
+        _nameView.text = item.name;
+    }else{
+        NSLog(@"%@",item);
+    }
     
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.icon]];
-    _nameView.text = item.name;
+
     
     
 }

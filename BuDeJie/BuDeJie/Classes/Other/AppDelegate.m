@@ -34,11 +34,11 @@
    //1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //2.设置窗口根控制器
-    //XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
-     XMGAdViewController *adVc = [[XMGAdViewController alloc]init];
-    self.window.rootViewController =adVc;
-    //self.window.rootViewController =tabBarVc;
-    
+    XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
+    // XMGAdViewController *adVc = [[XMGAdViewController alloc]init];
+    //self.window.rootViewController =adVc;
+    self.window.rootViewController =tabBarVc;
+     //[UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
 
     
     //3.显示窗口,1.成为UIApplication主窗口 2.

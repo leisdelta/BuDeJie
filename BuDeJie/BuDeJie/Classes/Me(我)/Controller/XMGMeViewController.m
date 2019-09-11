@@ -64,8 +64,16 @@ static CGFloat const margin = 1;
         NSArray *dictArr = responseObject[@"square_list"];
         
         // 字典数组转换成模型数组
-       _squareItems = [XMGSquareItem mj_objectArrayWithKeyValuesArray:dictArr];
+       NSArray *arr = [XMGSquareItem mj_objectArrayWithKeyValuesArray:dictArr];
+        NSMutableArray *marr = [NSMutableArray new];
+        [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[XMGSquareItem class]]) {
+                [marr addObject:obj];
+            }
+        }];
+        _squareItems  = marr;
         
+//       _squareItems = [arr mutableCopy];
         // 处理数据
         [self resloveData];
 //
@@ -74,7 +82,7 @@ static CGFloat const margin = 1;
         NSInteger count = _squareItems.count;
         NSInteger rows = (count - 1) / cols + 1;
 //        // 设置collectioView高度
-//        self.collectionView.xmg_height = rows * itemWH;
+        self.collectionView.xmg_height = rows * itemWH;
 //
         // 设置tableView滚动范围:自己计算
         self.tableView.tableFooterView = self.collectionView;
