@@ -88,6 +88,10 @@
     XMGTabBar *tabBar = [[XMGTabBar alloc] init];
     
     [self setValue:tabBar forKey:@"tabBar"];
+    
+    //上级代理已经存在,不允许再改了
+   // self.tabBar.delegate = self;
+    
 }
 
 /*

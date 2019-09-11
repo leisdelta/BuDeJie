@@ -44,7 +44,32 @@ static CGFloat const margin = 1;
     self.tableView.sectionFooterHeight = 10;
     
     self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
+    
+    //重复点击tabBarButton按钮的事件
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XMGTabBarButtonDidRepeatClickNotification object:nil];
+    
+    
 }
+//有通知就有移除,一定要记得写几个通知就需要移除几个通知
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark -监听tabBarButton是否被双击调用方法
+-(void)tabBarButtonDidRepeatClick{
+    
+    //双击事件不在当前的精华按钮上的时候,该controller被移除,可以写成如下
+    if(self.view.window == nil) return;
+    
+    //点击中间的事件的时候也不执行以下的代码
+    if(self.tableView.scrollsToTop == NO) return;
+    //NSLog(@"aaaaaaaaaaaaaaaaaaaaaaa");
+    XMGFunc
+}
+
+    
+
 
 
 #pragma mark - 请求数据

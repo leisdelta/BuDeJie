@@ -13,6 +13,9 @@
 /**tabBarItem的中间按钮懒加载一次*/
 @property (nonatomic,weak) UIButton *plusButton;
 
+/**上一次点击的按钮*/
+@property (nonatomic,weak) UIControl *previousClickedTabBarButton;
+
 @end
 ///Users/lei/Desktop/GitHub/BuDeJie/BuDeJie/BuDeJie/Classes/Other/BuDeJie.pch
 
@@ -59,8 +62,12 @@
     //布局tabBarButton
     //NSLog(@"%@",self.subviews);
     NSInteger i = 0;
-    for(UIView *tabBarButton in self.subviews){
+    for(UIControl *tabBarButton in self.subviews){
         if([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]){
+            //设置previousClickedTabBarButton默认值为最前面的按钮
+            if(i == 0 && self.previousClickedTabBarButton ==nil){
+                self.previousClickedTabBarButton = tabBarButton;
+            }
           //  NSLog(@"%@",tabBarButton);
             if(i == 2){
                 i+=1;
@@ -70,12 +77,28 @@
             tabBarButton.frame = CGRectMake(btnX, 0, btnW, btnH);
             
             i++;
+            //监听点击,短时间内连续点击按钮触发事件UIControlEventTouchDownRepeat
+            [tabBarButton addTarget:self action:@selector(tabBarButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+            
+
         }
     }
     
     //设置加号按钮center
     self.plusButton.center = CGPointMake(self.frame.size.width *0.5, self.frame.size.height * 0.5);
     
+}
+
+
+-(void)tabBarButtonClick:(UIControl *)tabBarButton{
+
+    if(self.previousClickedTabBarButton == tabBarButton){
+         XMGFunc;
+        //通知重复点击事件告诉相关的的controller进行执行逻辑
+        [[NSNotificationCenter defaultCenter] postNotificationName:XMGTabBarButtonDidRepeatClickNotification object:nil];
+    }
+    self.previousClickedTabBarButton = tabBarButton;
+
 }
 
 @end

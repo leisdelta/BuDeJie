@@ -104,12 +104,12 @@
     CGFloat w = UIScreen.mainScreen.bounds.size.width;
     CGFloat h = UIScreen.mainScreen.bounds.size.height;
     
-    UIView *view = [UIView new];
-    view.frame = CGRectMake(0, 0, w, 1);
-    view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:view];
+   // UIView *view = [UIView new];
+   // view.frame = CGRectMake(0, 0, w, 1);
+   // view.backgroundColor = [UIColor redColor];
+   // [self.view addSubview:view];
     // 不允许自动修改UIScrollView的内边距
-    self.automaticallyAdjustsScrollViewInsets = NO;
+   // self.automaticallyAdjustsScrollViewInsets = NO;
     //self.extendedLayoutIncludesOpaqueBars = YES;
   
     
@@ -134,23 +134,30 @@
     CGFloat scrollViewW = scrollView.xmg_width;
     CGFloat scrollViewH = scrollView.xmg_height;
     
-    for (NSUInteger i = 0; i < count; i++) {
-        
-        //UIView *view = [UIView new];
-        //view.frame = CGRectMake(0, 0, w, 1);
-       // view.backgroundColor = [UIColor redColor];
-        [self.view addSubview:view];
-        scrollView.frame = CGRectMake(0, 1, w, h-1);
-        
-        // 取出i位置子控制器的view
-        UIView *childVcView = self.childViewControllers[i].view;
-        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-        [scrollView addSubview:childVcView];
-    }
+//    for (NSUInteger i = 0; i < count; i++) {
+//
+//        //UIView *view = [UIView new];
+//        //view.frame = CGRectMake(0, 0, w, 1);
+//       // view.backgroundColor = [UIColor redColor];
+//        [self.view addSubview:view];
+//        scrollView.frame = CGRectMake(0, 1, w, h-1);
+//
+//        // 取出i位置子控制器的view
+//        UIView *childVcView = self.childViewControllers[i].view;
+//        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
+//        [scrollView addSubview:childVcView];
+//    }
     
     scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
+    
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.pagingEnabled = YES;
+    scrollView.scrollsToTop = NO; // 点击状态栏的时候，这个scrollView不会滚动到最顶部
     scrollView.delegate = self;
 }
+
+
 #pragma mark -减速为零的时候调用
 //-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 //    if(!decelerate){
@@ -187,6 +194,8 @@
     //标题栏下划线
     [self setupTitleUnderline];
 }
+
+
 //标题栏按钮
 -(void)setupTitleButtons{
     
@@ -208,7 +217,7 @@
         //frame
         titleButton.frame =CGRectMake(i * titleButtonW, 0, titleButtonW, titleButtonH);
         //背景色
-        titleButton.backgroundColor = XMGRandomColor;
+       // titleButton.backgroundColor = XMGRandomColor;
         
         //添加文字
         [titleButton setTitle:titles[i] forState:UIControlStateNormal];
@@ -220,6 +229,16 @@
 //监听按钮
 -(void)titleButtonClick:(UIButton *)titleButton
 {
+    
+    //双击按钮代表刷新
+    if(self.previousClickedTitleButton == titleButton){
+        
+       // XMGFunc
+        //通知重复点击事件告诉相关的的controller进行执行逻辑
+        [[NSNotificationCenter defaultCenter] postNotificationName:XMGTitleButtonDidRepeatClickNotification object:nil];
+        
+    }
+    
    // XMGFunc;
     //还原上一次点击的按钮颜色
 //    [_previousClickedTitleButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -233,6 +252,7 @@
     titleButton.selected = YES;
     self.previousClickedTitleButton = titleButton;
     
+     NSInteger index = titleButton.tag;
     //下划线的调用
     [UIView animateWithDuration:0.25 animations:^{
         //下划线加载
@@ -245,7 +265,34 @@
         //滚动scrollView设置偏移量
         CGFloat offsetX = self.scrollView.xmg_width *titleButton.tag;
         self.scrollView.contentOffset = CGPointMake(offsetX, self.scrollView.contentOffset.y);
+    } completion:^(BOOL finished) {
+        //添加子控制器的view
+       
+//        UIView *childVcView = self.childViewControllers[titleButton.tag].view;
+//        childVcView.frame = CGRectMake(index * self.scrollView.xmg_width, 0, self.scrollView.xmg_width, self.scrollView.xmg_height);
+//        [self.scrollView addSubview:childVcView];
+        
+        // 添加子控制器的view
+        [self addChildVcViewIntoScrollView:index];
     }];
+    
+    // 设置index位置对应的tableView.scrollsToTop = YES， 其他都设置为NO
+    for (NSUInteger i = 0; i < self.childViewControllers.count; i++) {
+        UIViewController *childVc = self.childViewControllers[i];
+        // 如果view还没有被创建，就不用去处理
+        if (!childVc.isViewLoaded) continue;
+        
+        UIScrollView *scrollView = (UIScrollView *)childVc.view;
+        if (![scrollView isKindOfClass:[UIScrollView class]]) continue;
+        
+        //        if (i == index) { // 是标题按钮对应的子控制器
+        //            scrollView.scrollsToTop = YES;
+        //        } else {
+        //            scrollView.scrollsToTop = NO;
+        //        }
+        scrollView.scrollsToTop = (i == index);
+    }
+    
 }
 
 
@@ -306,6 +353,27 @@
 -(void)game
 {
     XMGFunc;
+}
+
+#pragma mark - 其他
+/**
+ *  添加第index个子控制器的view到scrollView中
+ */
+- (void)addChildVcViewIntoScrollView:(NSUInteger)index
+{
+    UIViewController *childVc = self.childViewControllers[index];
+    
+    // 如果view已经被加载过，就直接返回
+    if (childVc.isViewLoaded) return;
+    
+    // 取出index位置对应的子控制器view
+    UIView *childVcView = childVc.view;
+    
+    // 设置子控制器view的frame
+    CGFloat scrollViewW = self.scrollView.xmg_width;
+    childVcView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, self.scrollView.xmg_height);
+    // 添加子控制器的view到scrollView中
+    [self.scrollView addSubview:childVcView];
 }
 
 @end
