@@ -65,6 +65,7 @@
 		ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E37231E596200E425BB /* XMGPublishViewController.m */; };
 		ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */; };
 		ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E42231E912500E425BB /* UIImage+Image.m */; };
+		ABF6C60C2329FD49008D965D /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF6C60A2329FD49008D965D /* XMGTopic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBarController.m; sourceTree = "<group>"; };
 		ABF63E41231E912500E425BB /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		ABF63E42231E912500E425BB /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		ABF6C60A2329FD49008D965D /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
+		ABF6C60B2329FD49008D965D /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +443,8 @@
 		ABF63E12231E57B200E425BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABF6C60B2329FD49008D965D /* XMGTopic.h */,
+				ABF6C60A2329FD49008D965D /* XMGTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -816,6 +821,7 @@
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
 				ABB6B84C2327822A00B153F4 /* XMGVoiceViewController.m in Sources */,
 				ABB6B84D2327822A00B153F4 /* XMGWordViewController.m in Sources */,
+				ABF6C60C2329FD49008D965D /* XMGTopic.m in Sources */,
 				AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */,
 				AB071F4E23239CE10023F9E8 /* XMGLoginRegisterView.m in Sources */,
 				AB167B4A2324FB31000FBFC8 /* UITextField+Placeholder.m in Sources */,

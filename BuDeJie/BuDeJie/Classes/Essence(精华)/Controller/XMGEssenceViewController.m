@@ -40,238 +40,186 @@
 #import "XMGPictureViewController.h"
 #import "XMGWordViewController.h"
 
-#define XMGRandomColor XMGColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
-
-
-//UIBarButtonItem:描述按钮具体的内容
-//UINavigationItem:设置导航条上内容(左边,右边,中间)
-//tabBarItem:设置tabBar上按钮内容(tabBarItem)
-@interface XMGEssenceViewController ()<UIScrollViewDelegate>
-
-/**scrollView*/
-@property (nonatomic,weak) UIScrollView *scrollView;
-/**titleView属性*/
-@property (nonatomic,weak) UIView *titleView;
-
-/**下划线属性*/
-@property (nonatomic,weak) UIView *titleUnderline;
-
-/**记录上一次点击的标题按钮*/
-@property (nonatomic,weak) UIButton *previousClickedTitleButton;
+@interface XMGEssenceViewController () <UIScrollViewDelegate>
+/** 用来存放所有子控制器view的scrollView */
+@property (nonatomic, weak) UIScrollView *scrollView;
+/** 标题栏 */
+@property (nonatomic, weak) UIView *titlesView;
+/** 标题下划线 */
+@property (nonatomic, weak) UIView *titleUnderline;
+/** 上一次点击的标题按钮 */
+@property (nonatomic, weak) XMGTitleButton *previousClickedTitleButton;
 @end
-/*
- UIControlStateNormal       = 0,
- UIControlStateHighlighted  = 1 << 0,                  // used when UIControl isHighlighted is set
- UIControlStateDisabled     = 1 << 1,
- UIControlStateSelected     = 1 << 2,
- */
-
 
 @implementation XMGEssenceViewController
-
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //self.view.backgroundColor = [UIColor redColor];
     
-    //所有控制器要放置在前面
-    [self setuupAllChildVcs];
+    // 初始化子控制器
+    [self setupAllChildVcs];
     
-    //设置导航条
+    // 设置导航条
     [self setupNavBar];
     
-    //设置scrollView
+    // scrollView
     [self setupScrollView];
-    //标题栏
+    
+    // 标题栏
     [self setupTitlesView];
     
-    
-}
--(void)setuupAllChildVcs
-{
-    [self addChildViewController:[[XMGAllViewController alloc]init]];
-    [self addChildViewController:[[XMGVideoViewController alloc]init]];
-    [self addChildViewController:[[XMGVoiceViewController alloc]init]];
-    [self addChildViewController:[[XMGPictureViewController alloc]init]];
-    [self addChildViewController:[[XMGWordViewController alloc]init]];
+    // 添加第0个子控制器的view
+    [self addChildVcViewIntoScrollView:0];
 }
 
-//设置滚动栏
+/**
+ *  初始化子控制器
+ */
+- (void)setupAllChildVcs
+{
+    [self addChildViewController:[[XMGAllViewController alloc] init]];
+    [self addChildViewController:[[XMGVideoViewController alloc] init]];
+    [self addChildViewController:[[XMGVoiceViewController alloc] init]];
+    [self addChildViewController:[[XMGPictureViewController alloc] init]];
+    [self addChildViewController:[[XMGWordViewController alloc] init]];
+}
+
+/**
+ *  设置导航条
+ */
+- (void)setupNavBar
+{
+    // 左边按钮
+    // 把UIButton包装成UIBarButtonItem.就导致按钮点击区域扩大
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"nav_item_game_icon"] highImage:[UIImage imageNamed:@"nav_item_game_click_icon"] target:self action:@selector(game)];
+    
+    // 右边按钮
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"navigationButtonRandom"] highImage:[UIImage imageNamed:@"navigationButtonRandomClick"] target:nil action:nil];
+    
+    // titleView
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+}
+
+/**
+ *  scrollView
+ */
 - (void)setupScrollView
 {
-    
-    
-    CGFloat w = UIScreen.mainScreen.bounds.size.width;
-    CGFloat h = UIScreen.mainScreen.bounds.size.height;
-    
-   // UIView *view = [UIView new];
-   // view.frame = CGRectMake(0, 0, w, 1);
-   // view.backgroundColor = [UIColor redColor];
-   // [self.view addSubview:view];
     // 不允许自动修改UIScrollView的内边距
-   // self.automaticallyAdjustsScrollViewInsets = NO;
-    //self.extendedLayoutIncludesOpaqueBars = YES;
-  
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor blueColor];
-    scrollView.frame = CGRectMake(0, 1, w, h-1);
-//    if (@available(iOS 11.0, *)) {
-//        scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//    } else {
-//        self.automaticallyAdjustsScrollViewInsets = NO;
-//    }
-    
-    //scrollView.showsHorizontalScrollIndicator = NO;
-   // scrollView.showsVerticalScrollIndicator = NO;
-    scrollView.pagingEnabled = YES;
-    [self.view addSubview:scrollView];
-    
-    self.scrollView =scrollView;
-    
-    // 添加子控制器的view
-    NSUInteger count = self.childViewControllers.count;
-    CGFloat scrollViewW = scrollView.xmg_width;
-    CGFloat scrollViewH = scrollView.xmg_height;
-    
-//    for (NSUInteger i = 0; i < count; i++) {
-//
-//        //UIView *view = [UIView new];
-//        //view.frame = CGRectMake(0, 0, w, 1);
-//       // view.backgroundColor = [UIColor redColor];
-//        [self.view addSubview:view];
-//        scrollView.frame = CGRectMake(0, 1, w, h-1);
-//
-//        // 取出i位置子控制器的view
-//        UIView *childVcView = self.childViewControllers[i].view;
-//        childVcView.frame = CGRectMake(i * scrollViewW, 0, scrollViewW, scrollViewH);
-//        [scrollView addSubview:childVcView];
-//    }
-    
-    scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
-    
+    scrollView.frame = self.view.bounds;
+    scrollView.delegate = self;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.pagingEnabled = YES;
     scrollView.scrollsToTop = NO; // 点击状态栏的时候，这个scrollView不会滚动到最顶部
-    scrollView.delegate = self;
+    [self.view addSubview:scrollView];
+    self.scrollView = scrollView;
+    
+    // 添加子控制器的view
+    NSUInteger count = self.childViewControllers.count;
+    CGFloat scrollViewW = scrollView.xmg_width;
+    scrollView.contentSize = CGSizeMake(count * scrollViewW, 0);
 }
-
-
-#pragma mark -减速为零的时候调用
-//-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//    if(!decelerate){
-//        //这里复制scrollViewDidEndDecelerating里的代码
-//    }
-//}
 
 /**
- *  当用户松开scrollView并且滑动结束时调用这个代理方法（scrollView停止滚动的时候）
+ *  标题栏
  */
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+- (void)setupTitlesView
 {
-    // 求出标题按钮的索引
-    NSUInteger index = scrollView.contentOffset.x / scrollView.xmg_width;
-    // index == [0, 4]
+    UIView *titlesView = [[UIView alloc] init];
+    titlesView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    titlesView.frame = CGRectMake(0, 64, self.view.xmg_width, 35);
+    [self.view addSubview:titlesView];
+    self.titlesView = titlesView;
     
-    // 点击对应的标题按钮
-    XMGTitleButton *titleButton = self.titleView.subviews[index];
-    //    XMGTitleButton *titleButton = [self.titlesView viewWithTag:index];
-    [self titleButtonClick:titleButton];
-}
-
-//设置标题栏
--(void)setupTitlesView
-{
-    UIView *titleView = [[UIView alloc] init];
-    //设置半透明颜色背景
-    titleView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
-    titleView.frame = CGRectMake(0, 64, self.view.xmg_width, 35);
-    [self.view addSubview:titleView];
-    self.titleView = titleView;
-    //标题栏按钮
+    // 标题栏按钮
     [self setupTitleButtons];
-    //标题栏下划线
+    
+    // 标题下划线
     [self setupTitleUnderline];
 }
 
-
-//标题栏按钮
--(void)setupTitleButtons{
+/**
+ *  标题栏按钮
+ */
+- (void)setupTitleButtons
+{
+    // 文字
+    NSArray *titles = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
+    NSUInteger count = titles.count;
     
-    //按钮文字
-    NSArray *titles =@[@"全部",@"视频",@"声音",@"图片",@"段子"];
+    // 标题按钮的尺寸
+    CGFloat titleButtonW = self.titlesView.xmg_width / count;
+    CGFloat titleButtonH = self.titlesView.xmg_height;
     
-    NSInteger count = titles.count;
-    
-    CGFloat titleButtonW = self.titleView.xmg_width /count;
-    CGFloat titleButtonH = self.titleView.xmg_height;
-    
-    for(NSInteger i = 0;i < count; i++){
-        
-        UIButton *titleButton = [[UIButton alloc] init];
-        [titleButton addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.titleView addSubview:titleButton];
+    // 创建5个标题按钮
+    for (NSUInteger i = 0; i < count; i++) {
+        XMGTitleButton *titleButton = [[XMGTitleButton alloc] init];
         titleButton.tag = i;
-        
-        //frame
-        titleButton.frame =CGRectMake(i * titleButtonW, 0, titleButtonW, titleButtonH);
-        //背景色
-       // titleButton.backgroundColor = XMGRandomColor;
-        
-        //添加文字
+        [titleButton addTarget:self action:@selector(titleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.titlesView addSubview:titleButton];
+        // frame
+        titleButton.frame = CGRectMake(i * titleButtonW, 0, titleButtonW, titleButtonH);
+        // 文字
         [titleButton setTitle:titles[i] forState:UIControlStateNormal];
-        [titleButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [titleButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        
     }
 }
-//监听按钮
--(void)titleButtonClick:(UIButton *)titleButton
+
+/**
+ *  标题下划线
+ */
+- (void)setupTitleUnderline
 {
+    // 标题按钮
+    XMGTitleButton *firstTitleButton = self.titlesView.subviews.firstObject;
     
-    //双击按钮代表刷新
-    if(self.previousClickedTitleButton == titleButton){
-        
-       // XMGFunc
-        //通知重复点击事件告诉相关的的controller进行执行逻辑
+    // 下划线
+    UIView *titleUnderline = [[UIView alloc] init];
+    titleUnderline.xmg_height = 2;
+    titleUnderline.xmg_y = self.titlesView.xmg_height - titleUnderline.xmg_height;
+    titleUnderline.backgroundColor = [firstTitleButton titleColorForState:UIControlStateSelected];
+    [self.titlesView addSubview:titleUnderline];
+    self.titleUnderline = titleUnderline;
+    
+    // 切换按钮状态
+    firstTitleButton.selected = YES;
+    self.previousClickedTitleButton = firstTitleButton;
+    
+    [firstTitleButton.titleLabel sizeToFit]; // 让label根据文字内容计算尺寸
+    self.titleUnderline.xmg_width = firstTitleButton.titleLabel.xmg_width + 10;
+    self.titleUnderline.xmg_centerX = firstTitleButton.xmg_centerX;
+}
+
+#pragma mark - 监听
+/**
+ *  点击标题按钮
+ */
+- (void)titleButtonClick:(XMGTitleButton *)titleButton
+{
+    // 重复点击了标题按钮
+    if (self.previousClickedTitleButton == titleButton) {
         [[NSNotificationCenter defaultCenter] postNotificationName:XMGTitleButtonDidRepeatClickNotification object:nil];
-        
     }
     
-   // XMGFunc;
-    //还原上一次点击的按钮颜色
-//    [_previousClickedTitleButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-//
-//    //添加本次的按钮颜色
-//    [titleButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-//
-//    _previousClickedTitleButton = titleButton;
-    
+    // 切换按钮状态
     self.previousClickedTitleButton.selected = NO;
     titleButton.selected = YES;
     self.previousClickedTitleButton = titleButton;
     
-     NSInteger index = titleButton.tag;
-    //下划线的调用
+    NSUInteger index = titleButton.tag;
     [UIView animateWithDuration:0.25 animations:^{
-        //下划线加载
-        //算出字体的长度来调整下划线的长度
-      // self.titleUnderline.xmg_width = [titleButton.currentTitle sizeWithFont:titleButton.titleLabel.font].width;
-        
-        self.titleUnderline.xmg_width = [titleButton.currentTitle sizeWithAttributes:@{NSFontAttributeName:titleButton.titleLabel.font}].width;
+        // 处理下划线
+        self.titleUnderline.xmg_width = titleButton.titleLabel.xmg_width + 10;
         self.titleUnderline.xmg_centerX = titleButton.xmg_centerX;
         
-        //滚动scrollView设置偏移量
-        CGFloat offsetX = self.scrollView.xmg_width *titleButton.tag;
+        // 滚动scrollView
+        CGFloat offsetX = self.scrollView.xmg_width * index;
         self.scrollView.contentOffset = CGPointMake(offsetX, self.scrollView.contentOffset.y);
     } completion:^(BOOL finished) {
-        //添加子控制器的view
-       
-//        UIView *childVcView = self.childViewControllers[titleButton.tag].view;
-//        childVcView.frame = CGRectMake(index * self.scrollView.xmg_width, 0, self.scrollView.xmg_width, self.scrollView.xmg_height);
-//        [self.scrollView addSubview:childVcView];
-        
         // 添加子控制器的view
         [self addChildVcViewIntoScrollView:index];
     }];
@@ -292,67 +240,25 @@
         //        }
         scrollView.scrollsToTop = (i == index);
     }
-    
 }
 
-
-//标题栏下划线
--(void)setupTitleUnderline
+- (void)game
 {
-    //创建下划线背景图
-    XMGTitleButton *firstTitleButton = self.titleView.subviews.firstObject;
-    UIView *titleUnderline = [[UIView alloc] init];
-    titleUnderline.xmg_height = 2;
-    titleUnderline.xmg_y = self.titleView.xmg_height - titleUnderline.xmg_height;
-    //titleUnderline.xmg_width = firstTitleButton.xmg_width;
-   // titleUnderline.xmg_width = [firstTitleButton.currentTitle sizeWithFont:firstTitleButton.titleLabel.font].width;
-    titleUnderline.backgroundColor = [firstTitleButton titleColorForState:UIControlStateSelected];
-    [self.titleView addSubview:titleUnderline];
-    
-    //把下划线装载到属性中
-    self.titleUnderline = titleUnderline;
-    
-    //默认点击最前面的按钮
-    [firstTitleButton.titleLabel sizeToFit];//label根据文字内容计算尺寸
-    [self titleButtonClick:firstTitleButton];
-    
+    XMGFunc
 }
 
-
-
-//设置导航条
--(void)setupNavBar
+#pragma mark - <UIScrollViewDelegate>
+/**
+ *  当用户松开scrollView并且滑动结束时调用这个代理方法（scrollView停止滚动的时候）
+ */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    //左边按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"nav_item_game_icon"] highImage:[UIImage imageNamed:@"nav_item_game_click_icon"] target:self action:@selector(game)];
+    // 求出标题按钮的索引
+    NSUInteger index = scrollView.contentOffset.x / scrollView.xmg_width;
     
-    //右边按钮
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"navigationButtonRandom"] highImage:[UIImage imageNamed:@"navigationButtonRandomClick"] target:self action:@selector(game)];
-    
-    //titleView
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btn setImage:[UIImage imageNamed:@"nav_item_game_icon"] forState:UIControlStateNormal];
-//    [btn setImage:[UIImage imageNamed:@"nav_item_game_click_icon"] forState:UIControlStateHighlighted];
-//    //避免点击范围过大,旧版本这样设计可能还不能满足
-//    [btn sizeToFit];
-//
-//    //点击按钮触发事件
-//    [btn addTarget:self action:@selector(game) forControlEvents:UIControlEventTouchUpInside];
-//
-//    //把button包装成一个uiview然后缩小范围
-//    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];
-//    [containView addSubview:btn];
-//    UIBarButtonItem *leftItem  = [[UIBarButtonItem alloc]initWithCustomView:containView];
-    
-    //self.navigationItem.leftBarButtonItem =leftItem;
-    
-}
-
-#pragma mark --左边按钮点击事件
--(void)game
-{
-    XMGFunc;
+    // 点击对应的标题按钮
+    XMGTitleButton *titleButton = self.titlesView.subviews[index];
+    [self titleButtonClick:titleButton];
 }
 
 #pragma mark - 其他
@@ -375,5 +281,4 @@
     // 添加子控制器的view到scrollView中
     [self.scrollView addSubview:childVcView];
 }
-
 @end
