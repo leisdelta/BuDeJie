@@ -6,16 +6,21 @@
 //  Copyright © 2016年 小码哥. All rights reserved.
 //
 
-
 #import "XMGAllViewController.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import "XMGTopic.h"
 #import <SVProgressHUD.h>
+#import "XMGTopicCell.h"
 
 @interface XMGAllViewController ()
+/** 当前最后一条帖子数据的描述信息，专门用来加载下一页数据 */
+@property (nonatomic, copy) NSString *maxtime;
 /** 所有的帖子数据 */
 @property (nonatomic, strong) NSMutableArray *topics;
+
+/** 请求管理者 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 /** 下拉刷新控件 */
 @property (nonatomic, weak) UIView *header;
@@ -34,13 +39,31 @@
 
 @implementation XMGAllViewController
 
+/* cell的重用标识 */
+static NSString * const XMGTopicCellId = @"XMGTopicCellId";
+
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = XMGRandomColor;
+    self.view.backgroundColor = XMGGrayColor(206);
     
-    self.tableView.contentInset = UIEdgeInsetsMake(XMGTitlesViewH, 0,XMGNavMaxY+ XMGTabBarH, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(XMGNavMaxY + XMGTitlesViewH, 0, XMGTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    //去掉中间分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight = 200;
+    
+    // 注册cell
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([XMGTopicCell class]) bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:XMGTopicCellId];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:XMGTabBarButtonDidRepeatClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:XMGTitleButtonDidRepeatClickNotification object:nil];
@@ -129,17 +152,20 @@
  */
 - (void)loadNewTopics
 {
-    // 1.创建请求会话管理者
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    // 1.取消之前的请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     // 2.拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"31";
     
     // 3.发送请求
-    [mgr GET:XMGCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+    [self.manager GET:XMGCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+        // 存储maxtime
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        
         // 字典数组 -> 模型数据
         self.topics = [XMGTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -149,7 +175,9 @@
         // 结束刷新
         [self headerEndRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍后再试！"];
+        if (error.code != NSURLErrorCancelled) { // 并非是取消任务导致的error，其他网络问题导致的error
+            [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍后再试！"];
+        }
         
         // 结束刷新
         [self headerEndRefreshing];
@@ -161,17 +189,21 @@
  */
 - (void)loadMoreTopics
 {
-    // 1.创建请求会话管理者
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    // 1.取消之前的请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     // 2.拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1"; // 这里发送@1也是可行的
+    parameters[@"type"] = @"31";
+    parameters[@"maxtime"] = self.maxtime;
     
     // 3.发送请求
-    [mgr GET:XMGCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+    [self.manager GET:XMGCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+        // 存储maxtime
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        
         // 字典数组 -> 模型数据
         NSArray *moreTopics = [XMGTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         // 累加到旧数组的后面
@@ -183,24 +215,14 @@
         // 结束刷新
         [self footerEndRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍后再试！"];
+        if (error.code != NSURLErrorCancelled) { // 并非是取消任务导致的error，其他网络问题导致的error
+            [SVProgressHUD showErrorWithStatus:@"网络繁忙，请稍后再试！"];
+        }
         
         // 结束刷新
         [self footerEndRefreshing];
     }];
 }
-
-
-/*
- // self.topics = @[10, 9, 8]
- // moreTopics = @[7, 6 ,5]
- 
- // self.topics = @[10, 9, 8, @[7, 6 ,5]]
- [self.topics addObject:moreTopics];
- 
- // self.topics = @[10, 9, 8, 7, 6 ,5]
- [self.topics addObjectsFromArray:moreTopics];
- */
 
 #pragma mark - 数据源
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -212,16 +234,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-        cell.backgroundColor = [UIColor clearColor];
-    }
+    XMGTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGTopicCellId];
     
-    XMGTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
+    cell.topic = self.topics[indexPath.row];
     
     return cell;
 }

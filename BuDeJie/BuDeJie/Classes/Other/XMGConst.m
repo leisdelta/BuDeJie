@@ -9,10 +9,14 @@ CGFloat const XMGNavMaxY = 64;
 /** 标题栏的高度 */
 CGFloat const XMGTitlesViewH = 35;
 
+/** 全局统一的间距 */
+CGFloat const XMGMarin = 10;
+
 /** 统一的一个请求路径 */
 NSString  * const XMGCommonURL = @"http://api.budejie.com/api/api_open.php";
 
-/**TabBarButton被重复点击的通知*/
-NSString * const XMGTabBarButtonDidRepeatClickNotification = @"XMGTabBarButtonDidRepeatClickNotification";
+/** TabBarButton被重复点击的通知 */
+NSString  * const XMGTabBarButtonDidRepeatClickNotification = @"XMGTabBarButtonDidRepeatClickNotification";
 
-NSString * const XMGTitleButtonDidRepeatClickNotification = @"XMGTitleButtonDidRepeatClickNotification";
+/** TitleButton被重复点击的通知 */
+NSString  * const XMGTitleButtonDidRepeatClickNotification = @"XMGTitleButtonDidRepeatClickNotification";

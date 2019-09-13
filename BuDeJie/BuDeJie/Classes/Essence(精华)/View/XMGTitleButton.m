@@ -6,6 +6,18 @@
 //  Copyright © 2016年 小码哥. All rights reserved.
 //
 
+/*
+ 特定构造方法
+ 1> 后面带有NS_DESIGNATED_INITIALIZER的方法，就是特定构造方法
+ 
+ 2> 子类如果重写了父类的【特定构造方法】，那么必须用super调用父类的【特定构造方法】，不然会出现警告
+ */
+
+/*
+ 警告信息:Designated initializer missing a 'super' call to a designated initializer of the super class
+ 意思：【特定构造方法】缺少super去调用父类的【特定构造方法】
+ */
+
 #import "XMGTitleButton.h"
 
 @implementation XMGTitleButton

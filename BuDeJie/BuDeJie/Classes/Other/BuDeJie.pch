@@ -2,13 +2,12 @@
 //  BuDeJie.pch
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/4.
-//  Copyright © 2019 xiaomage. All rights reserved.
+//  Created by xiaomage on 16/3/12.
+//  Copyright © 2016年 小码哥. All rights reserved.
 //
 
 /*
- 步骤:1.提前编译pch文件
- 
+ pch步骤:1.提前编译Pch
  
  1.存放公用宏
  2.存放公用头文件
@@ -18,12 +17,14 @@
 #import "UIView+Frame.h"
 #import "UIBarButtonItem+Item.h"
 #import "XMGConst.h"
+#import "UIImage+Image.h"
 
 // #filename -> "filename"
 // @#filename -> @"filename"
-#define XMGAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/xiaomage/Desktop/%@.plist", @#filename] atomically:YES];
+#define XMGAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/lei/Desktop/%@.plist", @#filename] atomically:YES];
 
 #define XMGColor(r,g,b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1]
+#define XMGGrayColor(v) XMGColor(v,v,v)
 #define XMGRandomColor XMGColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
 /***********屏幕适配*************/
@@ -37,16 +38,12 @@
 
 #define XMGFunc XMGLog(@"%s",__func__)
 
-#ifdef DEBUG //调试
-#define XMGLog(...)NSLog(__VA_ARGS__);
+#ifdef DEBUG // 调试
 
-#else //发布
+#define XMGLog(...) NSLog(__VA_ARGS__);
+
+#else // 发布
 
 #define XMGLog(...)
 
 #endif
-
-
-
-
-
