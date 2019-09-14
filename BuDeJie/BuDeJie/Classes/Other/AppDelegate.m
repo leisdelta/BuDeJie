@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "XMGTabBarController.h"
 #import "XMGAdViewController.h"
+#import <AFNetworking.h>
+
+
 @interface AppDelegate ()
 
 @end
@@ -43,6 +46,9 @@
     
     //3.显示窗口,1.成为UIApplication主窗口 2.
     [self.window makeKeyAndVisible];
+    
+    //4.开始监控网络状况
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
 }
 

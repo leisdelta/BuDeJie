@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property CGFloat xmg_y;
 @property CGFloat xmg_centerX;
 @property CGFloat xmg_centerY;
+
++(instancetype)xmg_viewFromXib;
 @end
 
 NS_ASSUME_NONNULL_END

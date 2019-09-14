@@ -28,7 +28,6 @@
 		AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0023209DE8009BD276 /* LaunchImage-700-568h@2x.png */; };
 		AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0123209DE8009BD276 /* LaunchImage.png */; };
 		AB735D37232B987C005604A9 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735D32232B987B005604A9 /* XMGTitleButton.m */; };
-		AB735D40232B9A33005604A9 /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB735D3D232B9A33005604A9 /* XMGTopicCell.xib */; };
 		AB735D41232B9A33005604A9 /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735D3F232B9A33005604A9 /* XMGTopicCell.m */; };
 		AB842646232103520098CC9C /* XMGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842645232103520098CC9C /* XMGADItem.m */; };
 		AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842648232202520098CC9C /* XMGSubTagViewController.m */; };
@@ -67,7 +66,14 @@
 		ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E37231E596200E425BB /* XMGPublishViewController.m */; };
 		ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */; };
 		ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E42231E912500E425BB /* UIImage+Image.m */; };
-		ABF6C60C2329FD49008D965D /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF6C60A2329FD49008D965D /* XMGTopic.m */; };
+		ABF72D62232CB3390070EF06 /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */; };
+		ABF72D6C232CCC8F0070EF06 /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D64232CCC8E0070EF06 /* XMGTopicPictureView.xib */; };
+		ABF72D6D232CCC8F0070EF06 /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D65232CCC8F0070EF06 /* XMGTopicPictureView.m */; };
+		ABF72D6E232CCC8F0070EF06 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */; };
+		ABF72D71232CCC8F0070EF06 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */; };
+		ABF72D75232CF0BE0070EF06 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D73232CF0BE0070EF06 /* XMGTopicVoiceView.xib */; };
+		ABF72D76232CF0BE0070EF06 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D74232CF0BE0070EF06 /* XMGTopicVoiceView.m */; };
+		ABF72D79232CF1330070EF06 /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D78232CF1330070EF06 /* XMGTopic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +118,6 @@
 		AB339C0123209DE8009BD276 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		AB735D32232B987B005604A9 /* XMGTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTitleButton.m; sourceTree = "<group>"; };
 		AB735D33232B987B005604A9 /* XMGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTitleButton.h; sourceTree = "<group>"; };
-		AB735D3D232B9A33005604A9 /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMGTopicCell.xib; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.xib"; sourceTree = "<group>"; };
 		AB735D3E232B9A33005604A9 /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGTopicCell.h; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.h"; sourceTree = "<group>"; };
 		AB735D3F232B9A33005604A9 /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGTopicCell.m; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.m"; sourceTree = "<group>"; };
 		AB842644232103520098CC9C /* XMGADItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGADItem.h; sourceTree = "<group>"; };
@@ -185,8 +190,18 @@
 		ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBarController.m; sourceTree = "<group>"; };
 		ABF63E41231E912500E425BB /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		ABF63E42231E912500E425BB /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
-		ABF6C60A2329FD49008D965D /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
-		ABF6C60B2329FD49008D965D /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
+		ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMGTopicCell.xib; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0324/代码/05-BuDeJie-添加中间内容/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.xib"; sourceTree = "<group>"; };
+		ABF72D63232CCC8E0070EF06 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
+		ABF72D64232CCC8E0070EF06 /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
+		ABF72D65232CCC8F0070EF06 /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
+		ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
+		ABF72D67232CCC8F0070EF06 /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
+		ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
+		ABF72D72232CF0BD0070EF06 /* XMGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVoiceView.h; sourceTree = "<group>"; };
+		ABF72D73232CF0BE0070EF06 /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
+		ABF72D74232CF0BE0070EF06 /* XMGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVoiceView.m; sourceTree = "<group>"; };
+		ABF72D77232CF1330070EF06 /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
+		ABF72D78232CF1330070EF06 /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,8 +449,8 @@
 				ABB6B8402327822900B153F4 /* XMGAllViewController.h */,
 				ABB6B8462327822A00B153F4 /* XMGAllViewController.m */,
 				ABB6B8442327822900B153F4 /* XMGPictureViewController.h */,
-				ABB6B8492327822A00B153F4 /* XMGPictureViewController.m */,
 				ABB6B8452327822A00B153F4 /* XMGVideoViewController.h */,
+				ABB6B8492327822A00B153F4 /* XMGPictureViewController.m */,
 				ABB6B8432327822900B153F4 /* XMGVideoViewController.m */,
 				ABB6B8412327822900B153F4 /* XMGVoiceViewController.h */,
 				ABB6B8472327822A00B153F4 /* XMGVoiceViewController.m */,
@@ -448,8 +463,8 @@
 		ABF63E12231E57B200E425BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ABF6C60B2329FD49008D965D /* XMGTopic.h */,
-				ABF6C60A2329FD49008D965D /* XMGTopic.m */,
+				ABF72D77232CF1330070EF06 /* XMGTopic.h */,
+				ABF72D78232CF1330070EF06 /* XMGTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,7 +476,16 @@
 				AB735D32232B987B005604A9 /* XMGTitleButton.m */,
 				AB735D3E232B9A33005604A9 /* XMGTopicCell.h */,
 				AB735D3F232B9A33005604A9 /* XMGTopicCell.m */,
-				AB735D3D232B9A33005604A9 /* XMGTopicCell.xib */,
+				ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */,
+				ABF72D67232CCC8F0070EF06 /* XMGTopicPictureView.h */,
+				ABF72D65232CCC8F0070EF06 /* XMGTopicPictureView.m */,
+				ABF72D64232CCC8E0070EF06 /* XMGTopicPictureView.xib */,
+				ABF72D63232CCC8E0070EF06 /* XMGTopicVideoView.h */,
+				ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */,
+				ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */,
+				ABF72D72232CF0BD0070EF06 /* XMGTopicVoiceView.h */,
+				ABF72D74232CF0BE0070EF06 /* XMGTopicVoiceView.m */,
+				ABF72D73232CF0BE0070EF06 /* XMGTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -747,22 +771,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB735D40232B9A33005604A9 /* XMGTopicCell.xib in Resources */,
+				ABF72D62232CB3390070EF06 /* XMGTopicCell.xib in Resources */,
 				AB071F43232382450023F9E8 /* XMGFriendTrendViewController.xib in Resources */,
 				AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */,
 				ABE4B2F62325CF410016463D /* XMGMeViewController.storyboard in Resources */,
 				ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */,
 				AB167B43232484A0000FBFC8 /* XMGFastLoginView.xib in Resources */,
+				ABF72D6C232CCC8F0070EF06 /* XMGTopicPictureView.xib in Resources */,
 				ABE4B2F32325CF410016463D /* XMGSquareCell.xib in Resources */,
 				ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */,
 				AB071F48232395EB0023F9E8 /* XMGLoginRegisterViewController.xib in Resources */,
 				ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */,
 				AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */,
+				ABF72D75232CF0BE0070EF06 /* XMGTopicVoiceView.xib in Resources */,
 				ABE4B2F92325CF410016463D /* XMGWebViewController.xib in Resources */,
 				AB071F5023239CF10023F9E8 /* XMGLoginRegisterView.xib in Resources */,
 				AB339C0523209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				AB339C0323209DE8009BD276 /* LaunchImage-568h@2x.png in Resources */,
 				AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */,
+				ABF72D6E232CCC8F0070EF06 /* XMGTopicVideoView.xib in Resources */,
 				AB339C0623209DE8009BD276 /* LaunchImage-700@2x.png in Resources */,
 				AB339C0423209DE8009BD276 /* LaunchImage-800-667h@2x.png in Resources */,
 				AB339C0223209DE8009BD276 /* LaunchImage@2x.png in Resources */,
@@ -828,10 +855,11 @@
 			files = (
 				AB8426542322A9C80098CC9C /* UIImage+Antialias.m in Sources */,
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
+				ABF72D6D232CCC8F0070EF06 /* XMGTopicPictureView.m in Sources */,
 				ABB6B84C2327822A00B153F4 /* XMGVoiceViewController.m in Sources */,
 				ABB6B84D2327822A00B153F4 /* XMGWordViewController.m in Sources */,
-				ABF6C60C2329FD49008D965D /* XMGTopic.m in Sources */,
 				AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */,
+				ABF72D79232CF1330070EF06 /* XMGTopic.m in Sources */,
 				AB071F4E23239CE10023F9E8 /* XMGLoginRegisterView.m in Sources */,
 				AB735D41232B9A33005604A9 /* XMGTopicCell.m in Sources */,
 				AB167B4A2324FB31000FBFC8 /* UITextField+Placeholder.m in Sources */,
@@ -865,6 +893,8 @@
 				ABE4B2F52325CF410016463D /* XMGSquareItem.m in Sources */,
 				ABF63E29231E57B300E425BB /* AppDelegate.m in Sources */,
 				ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */,
+				ABF72D76232CF0BE0070EF06 /* XMGTopicVoiceView.m in Sources */,
+				ABF72D71232CCC8F0070EF06 /* XMGTopicVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
