@@ -2,21 +2,21 @@
 //  UIImage+Image.m
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/3.
-//  Copyright © 2019 xiaomage. All rights reserved.
+//  Created by xiaomage on 16/3/11.
+//  Copyright © 2016年 小码哥. All rights reserved.
 //
 
 #import "UIImage+Image.h"
 
 @implementation UIImage (Image)
 
-+(UIImage *)imageOriginaWithName:(NSString *)imageName
++(instancetype)imageOriginaWithName:(NSString *)imageName
 {
-    UIImage *image =[UIImage imageNamed:imageName];
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    return image;
-}
+    UIImage *image = [UIImage imageNamed:imageName];
+    
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
+}
 
 - (instancetype)xmg_circleImage
 {

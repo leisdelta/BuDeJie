@@ -2,13 +2,18 @@
 //  UIView+Frame.m
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/4.
-//  Copyright © 2019 xiaomage. All rights reserved.
+//  Created by xiaomage on 16/3/12.
+//  Copyright © 2016年 小码哥. All rights reserved.
 //
 
 #import "UIView+Frame.h"
 
 @implementation UIView (Frame)
+
++ (instancetype)xmg_viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
 
 - (void)setXmg_height:(CGFloat)xmg_height
 {
@@ -55,7 +60,7 @@
 
 - (CGFloat)xmg_y
 {
-    
+
     return self.frame.origin.y;
 }
 
@@ -82,10 +87,4 @@
 {
     return self.center.y;
 }
-
-+(instancetype)xmg_viewFromXib
-{
-    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
-}
-
 @end

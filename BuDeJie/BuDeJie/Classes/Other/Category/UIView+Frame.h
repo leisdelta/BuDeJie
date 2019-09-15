@@ -2,15 +2,15 @@
 //  UIView+Frame.h
 //  BuDeJie
 //
-//  Created by mushroom on 2019/9/4.
-//  Copyright © 2019 xiaomage. All rights reserved.
+//  Created by xiaomage on 16/3/12.
+//  Copyright © 2016年 小码哥. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
 /*
- 写分类:避免跟其他开发者产生冲突
+ 
+    写分类:避免跟其他开发者产生冲突,加前缀
+ 
  */
 @interface UIView (Frame)
 
@@ -21,7 +21,5 @@ NS_ASSUME_NONNULL_BEGIN
 @property CGFloat xmg_centerX;
 @property CGFloat xmg_centerY;
 
-+(instancetype)xmg_viewFromXib;
++ (instancetype)xmg_viewFromXib;
 @end
-
-NS_ASSUME_NONNULL_END

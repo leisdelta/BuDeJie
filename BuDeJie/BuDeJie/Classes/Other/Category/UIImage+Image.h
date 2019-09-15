@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (Image)
-+(UIImage *)imageOriginaWithName:(NSString *)imageName;
++(instancetype)imageOriginaWithName:(NSString *)imageName;
 
 - (instancetype)xmg_circleImage;
 

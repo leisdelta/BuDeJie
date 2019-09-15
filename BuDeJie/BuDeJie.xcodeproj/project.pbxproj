@@ -17,7 +17,6 @@
 		AB167B43232484A0000FBFC8 /* XMGFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB167B40232484A0000FBFC8 /* XMGFastLoginView.xib */; };
 		AB167B44232484A0000FBFC8 /* XMGFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B41232484A0000FBFC8 /* XMGFastButton.m */; };
 		AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B462324FAF2000FBFC8 /* XMGLoginField.m */; };
-		AB167B4A2324FB31000FBFC8 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB167B492324FB30000FBFC8 /* UITextField+Placeholder.m */; };
 		AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB339BF623209448009BD276 /* XMGAdViewController.m */; };
 		AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB339BF82320962A009BD276 /* XMGAdViewController.xib */; };
 		AB339C0223209DE8009BD276 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339BFB23209DE8009BD276 /* LaunchImage@2x.png */; };
@@ -34,10 +33,7 @@
 		AB84264C23224F650098CC9C /* XMGSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264B23224F650098CC9C /* XMGSubTagItem.m */; };
 		AB84265023225C600098CC9C /* XMGSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264E23225C600098CC9C /* XMGSubTagCell.m */; };
 		AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB84264F23225C600098CC9C /* XMGSubTagCell.xib */; };
-		AB8426542322A9C80098CC9C /* UIImage+Antialias.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8426522322A9C80098CC9C /* UIImage+Antialias.m */; };
 		ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C04231F350F00410F9E /* XMGTabBar.m */; };
-		ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C07231F58CE00410F9E /* UIView+Frame.m */; };
-		ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */; };
 		ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */; };
 		ABB6B84A2327822A00B153F4 /* XMGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB6B8432327822900B153F4 /* XMGVideoViewController.m */; };
 		ABB6B84B2327822A00B153F4 /* XMGAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB6B8462327822A00B153F4 /* XMGAllViewController.m */; };
@@ -65,15 +61,20 @@
 		ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E34231E593C00E425BB /* XMGNewViewController.m */; };
 		ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E37231E596200E425BB /* XMGPublishViewController.m */; };
 		ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */; };
-		ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E42231E912500E425BB /* UIImage+Image.m */; };
 		ABF72D62232CB3390070EF06 /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */; };
-		ABF72D6C232CCC8F0070EF06 /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D64232CCC8E0070EF06 /* XMGTopicPictureView.xib */; };
-		ABF72D6D232CCC8F0070EF06 /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D65232CCC8F0070EF06 /* XMGTopicPictureView.m */; };
 		ABF72D6E232CCC8F0070EF06 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */; };
 		ABF72D71232CCC8F0070EF06 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */; };
 		ABF72D75232CF0BE0070EF06 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D73232CF0BE0070EF06 /* XMGTopicVoiceView.xib */; };
 		ABF72D76232CF0BE0070EF06 /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D74232CF0BE0070EF06 /* XMGTopicVoiceView.m */; };
 		ABF72D79232CF1330070EF06 /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D78232CF1330070EF06 /* XMGTopic.m */; };
+		ABFACA23232DBF4800F52774 /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA17232DBF4600F52774 /* UITextField+Placeholder.m */; };
+		ABFACA24232DBF4800F52774 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA18232DBF4700F52774 /* UIView+Frame.m */; };
+		ABFACA25232DBF4800F52774 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA19232DBF4700F52774 /* UIImageView+Download.m */; };
+		ABFACA26232DBF4800F52774 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA1A232DBF4700F52774 /* UIBarButtonItem+Item.m */; };
+		ABFACA27232DBF4800F52774 /* UIImage+Antialias.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA1B232DBF4700F52774 /* UIImage+Antialias.m */; };
+		ABFACA2B232DC0F400F52774 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA2A232DC0F400F52774 /* UIImage+Image.m */; };
+		ABFACA2F232E256100F52774 /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA2C232E256100F52774 /* XMGTopicPictureView.m */; };
+		ABFACA30232E256100F52774 /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFACA2E232E256100F52774 /* XMGTopicPictureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,8 +105,6 @@
 		AB167B41232484A0000FBFC8 /* XMGFastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFastButton.m; sourceTree = "<group>"; };
 		AB167B452324FAF2000FBFC8 /* XMGLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginField.h; sourceTree = "<group>"; };
 		AB167B462324FAF2000FBFC8 /* XMGLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginField.m; sourceTree = "<group>"; };
-		AB167B482324FB30000FBFC8 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
-		AB167B492324FB30000FBFC8 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
 		AB339BF523209448009BD276 /* XMGAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGAdViewController.h; sourceTree = "<group>"; };
 		AB339BF623209448009BD276 /* XMGAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGAdViewController.m; sourceTree = "<group>"; };
 		AB339BF82320962A009BD276 /* XMGAdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGAdViewController.xib; sourceTree = "<group>"; };
@@ -129,15 +128,9 @@
 		AB84264D23225C600098CC9C /* XMGSubTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagCell.h; sourceTree = "<group>"; };
 		AB84264E23225C600098CC9C /* XMGSubTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagCell.m; sourceTree = "<group>"; };
 		AB84264F23225C600098CC9C /* XMGSubTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGSubTagCell.xib; sourceTree = "<group>"; };
-		AB8426522322A9C80098CC9C /* UIImage+Antialias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Antialias.m"; sourceTree = "<group>"; };
-		AB8426532322A9C80098CC9C /* UIImage+Antialias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Antialias.h"; sourceTree = "<group>"; };
 		ABB08C03231F350F00410F9E /* XMGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		ABB08C04231F350F00410F9E /* XMGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
-		ABB08C06231F58CE00410F9E /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		ABB08C07231F58CE00410F9E /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		ABB08C09231F5D4500410F9E /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
-		ABB08C0D231F723300410F9E /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
-		ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		ABB08C10231FE2F100410F9E /* XMGNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGNavigationViewController.h; sourceTree = "<group>"; };
 		ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationViewController.m; sourceTree = "<group>"; };
 		ABB6B8402327822900B153F4 /* XMGAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllViewController.h; sourceTree = "<group>"; };
@@ -188,20 +181,30 @@
 		ABF63E37231E596200E425BB /* XMGPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGPublishViewController.m; sourceTree = "<group>"; };
 		ABF63E3B231E8AEA00E425BB /* XMGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBarController.h; sourceTree = "<group>"; };
 		ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBarController.m; sourceTree = "<group>"; };
-		ABF63E41231E912500E425BB /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
-		ABF63E42231E912500E425BB /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMGTopicCell.xib; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0324/代码/05-BuDeJie-添加中间内容/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.xib"; sourceTree = "<group>"; };
 		ABF72D63232CCC8E0070EF06 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
-		ABF72D64232CCC8E0070EF06 /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
-		ABF72D65232CCC8F0070EF06 /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
 		ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
-		ABF72D67232CCC8F0070EF06 /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
 		ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
 		ABF72D72232CF0BD0070EF06 /* XMGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVoiceView.h; sourceTree = "<group>"; };
 		ABF72D73232CF0BE0070EF06 /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
 		ABF72D74232CF0BE0070EF06 /* XMGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVoiceView.m; sourceTree = "<group>"; };
 		ABF72D77232CF1330070EF06 /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
 		ABF72D78232CF1330070EF06 /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
+		ABFACA17232DBF4600F52774 /* UITextField+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
+		ABFACA18232DBF4700F52774 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		ABFACA19232DBF4700F52774 /* UIImageView+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
+		ABFACA1A232DBF4700F52774 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		ABFACA1B232DBF4700F52774 /* UIImage+Antialias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Antialias.m"; sourceTree = "<group>"; };
+		ABFACA1C232DBF4700F52774 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		ABFACA1E232DBF4700F52774 /* UIImage+Antialias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Antialias.h"; sourceTree = "<group>"; };
+		ABFACA1F232DBF4700F52774 /* UITextField+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
+		ABFACA20232DBF4800F52774 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		ABFACA21232DBF4800F52774 /* UIImageView+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Download.h"; sourceTree = "<group>"; };
+		ABFACA29232DC0F400F52774 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		ABFACA2A232DC0F400F52774 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		ABFACA2C232E256100F52774 /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
+		ABFACA2D232E256100F52774 /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
+		ABFACA2E232E256100F52774 /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,9 +480,9 @@
 				AB735D3E232B9A33005604A9 /* XMGTopicCell.h */,
 				AB735D3F232B9A33005604A9 /* XMGTopicCell.m */,
 				ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */,
-				ABF72D67232CCC8F0070EF06 /* XMGTopicPictureView.h */,
-				ABF72D65232CCC8F0070EF06 /* XMGTopicPictureView.m */,
-				ABF72D64232CCC8E0070EF06 /* XMGTopicPictureView.xib */,
+				ABFACA2D232E256100F52774 /* XMGTopicPictureView.h */,
+				ABFACA2C232E256100F52774 /* XMGTopicPictureView.m */,
+				ABFACA2E232E256100F52774 /* XMGTopicPictureView.xib */,
 				ABF72D63232CCC8E0070EF06 /* XMGTopicVideoView.h */,
 				ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */,
 				ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */,
@@ -674,16 +677,18 @@
 		ABF63E40231E8FCA00E425BB /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				AB167B482324FB30000FBFC8 /* UITextField+Placeholder.h */,
-				AB167B492324FB30000FBFC8 /* UITextField+Placeholder.m */,
-				AB8426532322A9C80098CC9C /* UIImage+Antialias.h */,
-				AB8426522322A9C80098CC9C /* UIImage+Antialias.m */,
-				ABF63E41231E912500E425BB /* UIImage+Image.h */,
-				ABF63E42231E912500E425BB /* UIImage+Image.m */,
-				ABB08C06231F58CE00410F9E /* UIView+Frame.h */,
-				ABB08C07231F58CE00410F9E /* UIView+Frame.m */,
-				ABB08C0D231F723300410F9E /* UIBarButtonItem+Item.h */,
-				ABB08C0E231F723300410F9E /* UIBarButtonItem+Item.m */,
+				ABFACA1C232DBF4700F52774 /* UIBarButtonItem+Item.h */,
+				ABFACA1A232DBF4700F52774 /* UIBarButtonItem+Item.m */,
+				ABFACA1E232DBF4700F52774 /* UIImage+Antialias.h */,
+				ABFACA1B232DBF4700F52774 /* UIImage+Antialias.m */,
+				ABFACA29232DC0F400F52774 /* UIImage+Image.h */,
+				ABFACA2A232DC0F400F52774 /* UIImage+Image.m */,
+				ABFACA21232DBF4800F52774 /* UIImageView+Download.h */,
+				ABFACA19232DBF4700F52774 /* UIImageView+Download.m */,
+				ABFACA1F232DBF4700F52774 /* UITextField+Placeholder.h */,
+				ABFACA17232DBF4600F52774 /* UITextField+Placeholder.m */,
+				ABFACA20232DBF4800F52774 /* UIView+Frame.h */,
+				ABFACA18232DBF4700F52774 /* UIView+Frame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -776,8 +781,8 @@
 				AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */,
 				ABE4B2F62325CF410016463D /* XMGMeViewController.storyboard in Resources */,
 				ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */,
+				ABFACA30232E256100F52774 /* XMGTopicPictureView.xib in Resources */,
 				AB167B43232484A0000FBFC8 /* XMGFastLoginView.xib in Resources */,
-				ABF72D6C232CCC8F0070EF06 /* XMGTopicPictureView.xib in Resources */,
 				ABE4B2F32325CF410016463D /* XMGSquareCell.xib in Resources */,
 				ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */,
 				AB071F48232395EB0023F9E8 /* XMGLoginRegisterViewController.xib in Resources */,
@@ -853,16 +858,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8426542322A9C80098CC9C /* UIImage+Antialias.m in Sources */,
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
-				ABF72D6D232CCC8F0070EF06 /* XMGTopicPictureView.m in Sources */,
 				ABB6B84C2327822A00B153F4 /* XMGVoiceViewController.m in Sources */,
 				ABB6B84D2327822A00B153F4 /* XMGWordViewController.m in Sources */,
 				AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */,
 				ABF72D79232CF1330070EF06 /* XMGTopic.m in Sources */,
 				AB071F4E23239CE10023F9E8 /* XMGLoginRegisterView.m in Sources */,
+				ABFACA2B232DC0F400F52774 /* UIImage+Image.m in Sources */,
 				AB735D41232B9A33005604A9 /* XMGTopicCell.m in Sources */,
-				AB167B4A2324FB31000FBFC8 /* UITextField+Placeholder.m in Sources */,
+				ABFACA2F232E256100F52774 /* XMGTopicPictureView.m in Sources */,
+				ABFACA25232DBF4800F52774 /* UIImageView+Download.m in Sources */,
 				ABE4B2F72325CF410016463D /* XMGMeViewController.m in Sources */,
 				ABB6B8512327AE7900B153F4 /* XMGConst.m in Sources */,
 				ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */,
@@ -870,9 +875,11 @@
 				ABE4B2F42325CF410016463D /* XMGSquareCell.m in Sources */,
 				AB735D37232B987C005604A9 /* XMGTitleButton.m in Sources */,
 				AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */,
+				ABFACA23232DBF4800F52774 /* UITextField+Placeholder.m in Sources */,
 				AB071F46232394C50023F9E8 /* XMGLoginRegisterViewController.m in Sources */,
 				ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */,
-				ABF63E43231E912500E425BB /* UIImage+Image.m in Sources */,
+				ABFACA24232DBF4800F52774 /* UIView+Frame.m in Sources */,
+				ABFACA26232DBF4800F52774 /* UIBarButtonItem+Item.m in Sources */,
 				ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */,
 				AB167B42232484A0000FBFC8 /* XMGFastLoginView.m in Sources */,
 				AB842646232103520098CC9C /* XMGADItem.m in Sources */,
@@ -880,19 +887,18 @@
 				ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */,
 				ABB6B84B2327822A00B153F4 /* XMGAllViewController.m in Sources */,
 				AB167B44232484A0000FBFC8 /* XMGFastButton.m in Sources */,
+				ABFACA27232DBF4800F52774 /* UIImage+Antialias.m in Sources */,
 				ABE4B30123264F530016463D /* XMGFileTool.m in Sources */,
 				AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */,
 				ABB6B84E2327822A00B153F4 /* XMGPictureViewController.m in Sources */,
 				ABB6B84A2327822A00B153F4 /* XMGVideoViewController.m in Sources */,
 				ABE4B2F82325CF410016463D /* XMGWebViewController.m in Sources */,
 				ABE4B30423264FBC0016463D /* XMGSettingViewController.m in Sources */,
-				ABB08C0F231F723300410F9E /* UIBarButtonItem+Item.m in Sources */,
 				ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */,
 				ABF63E2F231E58DF00E425BB /* XMGFriendTrendViewController.m in Sources */,
 				ABF63E28231E57B300E425BB /* main.m in Sources */,
 				ABE4B2F52325CF410016463D /* XMGSquareItem.m in Sources */,
 				ABF63E29231E57B300E425BB /* AppDelegate.m in Sources */,
-				ABB08C08231F58CE00410F9E /* UIView+Frame.m in Sources */,
 				ABF72D76232CF0BE0070EF06 /* XMGTopicVoiceView.m in Sources */,
 				ABF72D71232CCC8F0070EF06 /* XMGTopicVideoView.m in Sources */,
 			);
