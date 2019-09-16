@@ -63,7 +63,7 @@ static NSString * const XMGTopicCellId = @"XMGTopicCellId";
     //分割线设置
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 设置cell的估算高度（每一行大约都是estimatedRowHeight）
-    self.tableView.estimatedRowHeight = 100;
+    //self.tableView.estimatedRowHeight = 100;
     
     // 注册cell
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([XMGTopicCell class]) bundle:nil];
@@ -152,8 +152,8 @@ static NSString * const XMGTopicCellId = @"XMGTopicCellId";
 
 #pragma mark - 数据处理
 -(XMGTopicType)type{
-    //return XMGTopicTypePicture;
-    return XMGTopicTypeVoice;
+    return XMGTopicTypePicture;
+    //return XMGTopicTypeVoice;
     //return XMGTopicTypeVideo;
 }
 
