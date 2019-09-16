@@ -12,6 +12,8 @@
 #import "XMGTopic.h"
 #import <SVProgressHUD.h>
 #import "XMGTopicCell.h"
+#import <SDImageCache.h>
+
 
 @interface XMGAllViewController ()
 /** 当前最后一条帖子数据的描述信息，专门用来加载下一页数据 */
@@ -150,7 +152,9 @@ static NSString * const XMGTopicCellId = @"XMGTopicCellId";
 
 #pragma mark - 数据处理
 -(XMGTopicType)type{
-    return XMGTopicTypePicture;
+    //return XMGTopicTypePicture;
+    return XMGTopicTypeVoice;
+    //return XMGTopicTypeVideo;
 }
 
 
@@ -292,7 +296,11 @@ static NSString * const XMGTopicCellId = @"XMGTopicCellId";
     
     // 处理footer
     [self dealFooter];
+    
+    //清除缓存 cleanDisk一个星期以上的清除SD缓存
+    [[SDImageCache sharedImageCache] clearMemory];
 }
+
 
 /**
  *  处理header

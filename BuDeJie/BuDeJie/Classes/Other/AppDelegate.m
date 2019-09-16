@@ -10,7 +10,8 @@
 #import "XMGTabBarController.h"
 #import "XMGAdViewController.h"
 #import <AFNetworking.h>
-
+#import <SDImageCache.h>
+#import "SDDiskCache.h"
 
 @interface AppDelegate ()
 
@@ -50,6 +51,10 @@
     //4.开始监控网络状况
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
+    
+    //5.每次启动程序,都清除过渡期的图片cleanDisk的方法在这个框架版本中不存在
+   // [[SDImageCache sharedImageCache] clearMemory];
+
 }
 
 

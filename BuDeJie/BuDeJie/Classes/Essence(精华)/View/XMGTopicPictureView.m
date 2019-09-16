@@ -9,6 +9,7 @@
 #import "XMGTopicPictureView.h"
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
+#import "XMGSeeBigPictureViewController.h"
 
 @interface XMGTopicPictureView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -32,7 +33,22 @@
 //    btn.contentEdgeInsets = UIEdgeInsetsMake(10, 0, 0, 0);
 //    btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
 //    btn.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    
+    self.imageView.userInteractionEnabled = YES;
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)]];
 }
+
+/*
+ 查看大图
+ */
+-(void)seeBigPicture
+{
+    XMGSeeBigPictureViewController *vc = [[XMGSeeBigPictureViewController alloc] init];
+    vc.topic = self.topic;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
+   // [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
+}
+
 
 -(void)setTopic:(XMGTopic *)topic
 {

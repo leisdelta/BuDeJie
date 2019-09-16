@@ -75,6 +75,8 @@
 		ABFACA2B232DC0F400F52774 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA2A232DC0F400F52774 /* UIImage+Image.m */; };
 		ABFACA2F232E256100F52774 /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA2C232E256100F52774 /* XMGTopicPictureView.m */; };
 		ABFACA30232E256100F52774 /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFACA2E232E256100F52774 /* XMGTopicPictureView.xib */; };
+		ABFACA34232E902F00F52774 /* XMGSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFACA33232E902F00F52774 /* XMGSeeBigPictureViewController.m */; };
+		ABFACA36232E906D00F52774 /* XMGSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFACA35232E906D00F52774 /* XMGSeeBigPictureViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,9 @@
 		ABFACA2C232E256100F52774 /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
 		ABFACA2D232E256100F52774 /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
 		ABFACA2E232E256100F52774 /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
+		ABFACA32232E902F00F52774 /* XMGSeeBigPictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		ABFACA33232E902F00F52774 /* XMGSeeBigPictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		ABFACA35232E906D00F52774 /* XMGSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -459,6 +464,9 @@
 				ABB6B8472327822A00B153F4 /* XMGVoiceViewController.m */,
 				ABB6B8422327822900B153F4 /* XMGWordViewController.h */,
 				ABB6B8482327822A00B153F4 /* XMGWordViewController.m */,
+				ABFACA32232E902F00F52774 /* XMGSeeBigPictureViewController.h */,
+				ABFACA33232E902F00F52774 /* XMGSeeBigPictureViewController.m */,
+				ABFACA35232E906D00F52774 /* XMGSeeBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -789,6 +797,7 @@
 				ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */,
 				AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */,
 				ABF72D75232CF0BE0070EF06 /* XMGTopicVoiceView.xib in Resources */,
+				ABFACA36232E906D00F52774 /* XMGSeeBigPictureViewController.xib in Resources */,
 				ABE4B2F92325CF410016463D /* XMGWebViewController.xib in Resources */,
 				AB071F5023239CF10023F9E8 /* XMGLoginRegisterView.xib in Resources */,
 				AB339C0523209DE8009BD276 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -860,6 +869,7 @@
 			files = (
 				ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */,
 				ABB6B84C2327822A00B153F4 /* XMGVoiceViewController.m in Sources */,
+				ABFACA34232E902F00F52774 /* XMGSeeBigPictureViewController.m in Sources */,
 				ABB6B84D2327822A00B153F4 /* XMGWordViewController.m in Sources */,
 				AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */,
 				ABF72D79232CF1330070EF06 /* XMGTopic.m in Sources */,

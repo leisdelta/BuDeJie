@@ -31,6 +31,31 @@
  *【不会】进入UIControlStateDisabled状态，继续保持当前状态
  
  */
+/*
+ 1.weak
+ 1>oc对象
+ 2.assign
+ 1>基本数据类型
+ 2>oc对象
+ 
+ 3.strong
+ 1>oc对象
+ 
+ 4.copy
+ 1>NSString *
+ 2>black
+ 
+ 5weak与assign的区别
+ 1>成员变量
+ 1)weak生成的成员变量是_weak修饰,
+ 2)assign生成的成员变量是_unsafe_unretained修饰
+ 2>_weak和_unsafe_unretained
+ 1)都不是抢指针(不是强引用),不能保住对象的命
+ 2)_weak:锁指向的对象销毁后,会自动变成nil指针(空指针)
+ 3)_unsafe_unretained:所指向的对象销毁后,仍旧指向已经销毁的这个对象(报错)
+ 
+ */
+
 #import "XMGEssenceViewController.h"
 #import "XMGTitleButton.h"
 
