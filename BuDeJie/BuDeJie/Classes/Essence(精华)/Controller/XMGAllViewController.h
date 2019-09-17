@@ -6,8 +6,8 @@
 //  Copyright © 2016年 小码哥. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XMGTopicViewController.h"
 
-@interface XMGAllViewController : UITableViewController
+@interface XMGAllViewController : XMGTopicViewController
 
 @end

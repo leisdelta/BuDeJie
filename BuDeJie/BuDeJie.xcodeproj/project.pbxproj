@@ -28,6 +28,8 @@
 		AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0123209DE8009BD276 /* LaunchImage.png */; };
 		AB735D37232B987C005604A9 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735D32232B987B005604A9 /* XMGTitleButton.m */; };
 		AB735D41232B9A33005604A9 /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735D3F232B9A33005604A9 /* XMGTopicCell.m */; };
+		AB76A2562330929700BEC1F0 /* test.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB76A2582330929700BEC1F0 /* test.strings */; };
+		AB76A2602330C6BD00BEC1F0 /* XMGTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76A25E2330C6BC00BEC1F0 /* XMGTopicViewController.m */; };
 		AB842646232103520098CC9C /* XMGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842645232103520098CC9C /* XMGADItem.m */; };
 		AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842648232202520098CC9C /* XMGSubTagViewController.m */; };
 		AB84264C23224F650098CC9C /* XMGSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264B23224F650098CC9C /* XMGSubTagItem.m */; };
@@ -121,6 +123,13 @@
 		AB735D33232B987B005604A9 /* XMGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTitleButton.h; sourceTree = "<group>"; };
 		AB735D3E232B9A33005604A9 /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGTopicCell.h; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.h"; sourceTree = "<group>"; };
 		AB735D3F232B9A33005604A9 /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGTopicCell.m; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.m"; sourceTree = "<group>"; };
+		AB76A25223308E7900BEC1F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		AB76A25323308E7A00BEC1F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AB76A2572330929700BEC1F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/test.strings"; sourceTree = "<group>"; };
+		AB76A259233092A600BEC1F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/test.strings; sourceTree = "<group>"; };
+		AB76A25B2330BA7500BEC1F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AB76A25E2330C6BC00BEC1F0 /* XMGTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicViewController.m; sourceTree = "<group>"; };
+		AB76A25F2330C6BD00BEC1F0 /* XMGTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicViewController.h; sourceTree = "<group>"; };
 		AB842644232103520098CC9C /* XMGADItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGADItem.h; sourceTree = "<group>"; };
 		AB842645232103520098CC9C /* XMGADItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGADItem.m; sourceTree = "<group>"; };
 		AB842647232202520098CC9C /* XMGSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagViewController.h; sourceTree = "<group>"; };
@@ -298,6 +307,25 @@
 			path = "启动图片";
 			sourceTree = "<group>";
 		};
+		AB76A25D2330C68300BEC1F0 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				AB76A25F2330C6BD00BEC1F0 /* XMGTopicViewController.h */,
+				AB76A25E2330C6BC00BEC1F0 /* XMGTopicViewController.m */,
+				ABB6B8402327822900B153F4 /* XMGAllViewController.h */,
+				ABB6B8462327822A00B153F4 /* XMGAllViewController.m */,
+				ABB6B8442327822900B153F4 /* XMGPictureViewController.h */,
+				ABB6B8492327822A00B153F4 /* XMGPictureViewController.m */,
+				ABB6B8452327822A00B153F4 /* XMGVideoViewController.h */,
+				ABB6B8432327822900B153F4 /* XMGVideoViewController.m */,
+				ABB6B8412327822900B153F4 /* XMGVoiceViewController.h */,
+				ABB6B8472327822A00B153F4 /* XMGVoiceViewController.m */,
+				ABB6B8422327822900B153F4 /* XMGWordViewController.h */,
+				ABB6B8482327822A00B153F4 /* XMGWordViewController.m */,
+			);
+			name = Topic;
+			sourceTree = "<group>";
+		};
 		ABB08C13231FECA200410F9E /* Setting(设置) */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,19 +482,10 @@
 			children = (
 				ABF63E2A231E587B00E425BB /* XMGEssenceViewController.h */,
 				ABF63E2B231E587B00E425BB /* XMGEssenceViewController.m */,
-				ABB6B8402327822900B153F4 /* XMGAllViewController.h */,
-				ABB6B8462327822A00B153F4 /* XMGAllViewController.m */,
-				ABB6B8442327822900B153F4 /* XMGPictureViewController.h */,
-				ABB6B8452327822A00B153F4 /* XMGVideoViewController.h */,
-				ABB6B8492327822A00B153F4 /* XMGPictureViewController.m */,
-				ABB6B8432327822900B153F4 /* XMGVideoViewController.m */,
-				ABB6B8412327822900B153F4 /* XMGVoiceViewController.h */,
-				ABB6B8472327822A00B153F4 /* XMGVoiceViewController.m */,
-				ABB6B8422327822900B153F4 /* XMGWordViewController.h */,
-				ABB6B8482327822A00B153F4 /* XMGWordViewController.m */,
 				ABFACA32232E902F00F52774 /* XMGSeeBigPictureViewController.h */,
 				ABFACA33232E902F00F52774 /* XMGSeeBigPictureViewController.m */,
 				ABFACA35232E906D00F52774 /* XMGSeeBigPictureViewController.xib */,
+				AB76A25D2330C68300BEC1F0 /* Topic */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -511,6 +530,7 @@
 				ABF63E17231E57B200E425BB /* AppDelegate.m */,
 				ABF63E16231E57B200E425BB /* main.m */,
 				ABB08C09231F5D4500410F9E /* BuDeJie.pch */,
+				AB76A2582330929700BEC1F0 /* test.strings */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -767,6 +787,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = ABF63DDF231E14F400E425BB;
 			productRefGroup = ABF63DE9231E14F400E425BB /* Products */;
@@ -788,6 +809,7 @@
 				AB071F43232382450023F9E8 /* XMGFriendTrendViewController.xib in Resources */,
 				AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */,
 				ABE4B2F62325CF410016463D /* XMGMeViewController.storyboard in Resources */,
+				AB76A2562330929700BEC1F0 /* test.strings in Resources */,
 				ABF63DF8231E14F500E425BB /* LaunchScreen.storyboard in Resources */,
 				ABFACA30232E256100F52774 /* XMGTopicPictureView.xib in Resources */,
 				AB167B43232484A0000FBFC8 /* XMGFastLoginView.xib in Resources */,
@@ -882,6 +904,7 @@
 				ABB6B8512327AE7900B153F4 /* XMGConst.m in Sources */,
 				ABF63E2C231E587B00E425BB /* XMGEssenceViewController.m in Sources */,
 				AB84265023225C600098CC9C /* XMGSubTagCell.m in Sources */,
+				AB76A2602330C6BD00BEC1F0 /* XMGTopicViewController.m in Sources */,
 				ABE4B2F42325CF410016463D /* XMGSquareCell.m in Sources */,
 				AB735D37232B987C005604A9 /* XMGTitleButton.m in Sources */,
 				AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */,
@@ -933,10 +956,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AB76A2582330929700BEC1F0 /* test.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB76A2572330929700BEC1F0 /* zh-Hans */,
+				AB76A259233092A600BEC1F0 /* en */,
+			);
+			name = test.strings;
+			sourceTree = "<group>";
+		};
 		ABF63DF1231E14F400E425BB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ABF63DF2231E14F400E425BB /* Base */,
+				AB76A25223308E7900BEC1F0 /* zh-Hans */,
+				AB76A25B2330BA7500BEC1F0 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -945,6 +979,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ABF63DF7231E14F500E425BB /* Base */,
+				AB76A25323308E7A00BEC1F0 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -956,6 +991,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1016,6 +1052,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

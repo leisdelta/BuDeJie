@@ -15,12 +15,15 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Canvas (0.1.2)
+  - CTAssetsPickerController (3.3.2-alpha):
+    - PureLayout (~> 3.0.0)
   - GPUImage (0.1.7)
   - ImagePlayerView (2.0.3)
   - IQKeyboardManager (6.4.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.1.0)
   - MJRefresh (3.2.0)
+  - PureLayout (3.0.2)
   - SDAutoLayout (2.2.1)
   - SDWebImage (5.1.0):
     - SDWebImage/Core (= 5.1.0)
@@ -30,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Canvas
+  - CTAssetsPickerController (~> 3.3.2-alpha)
   - GPUImage
   - ImagePlayerView (~> 2.0.3)
   - IQKeyboardManager
@@ -44,12 +48,14 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Canvas
+    - CTAssetsPickerController
     - GPUImage
     - ImagePlayerView
     - IQKeyboardManager
     - MBProgressHUD
     - MJExtension
     - MJRefresh
+    - PureLayout
     - SDAutoLayout
     - SDWebImage
     - SVProgressHUD
@@ -57,16 +63,18 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  CTAssetsPickerController: ef06977de8e0b6d6ff11a324d357a12335a61243
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   ImagePlayerView: 5b224c069afcd50f6d2239c75359928be08612b1
   IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1b8c849698457aabffea93571acc19648c0e3120
+PODFILE CHECKSUM: 21ac4c04c7e52d51b55a3dcb80f0bce450bda6be
 
 COCOAPODS: 1.7.5

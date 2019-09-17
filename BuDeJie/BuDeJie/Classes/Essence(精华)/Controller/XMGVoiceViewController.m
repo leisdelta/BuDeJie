@@ -1,43 +1,11 @@
-//
-//  XMGVoiceViewController.m
-//  BuDeJie
-//
-//  Created by xiaomage on 16/3/18.
-//  Copyright © 2016年 小码哥. All rights reserved.
-//
-
 #import "XMGVoiceViewController.h"
-
-@interface XMGVoiceViewController ()
-
-@end
-
 @implementation XMGVoiceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = XMGRandomColor;
-    self.tableView.contentInset = UIEdgeInsetsMake(35, 0, 0, 0);
-    //self.tableView.contentInset = UIEdgeInsetsMake(XMGNavMaxY + XMGTitlesViewH, 0, XMGTabBarH, 0);
 }
-
-#pragma mark - 数据源
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (XMGTopicType)type
 {
-    return 30;
+    return XMGTopicTypeVoice;
 }
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.backgroundColor = [UIColor clearColor];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@-%zd", self.class, indexPath.row];
-    return cell;
-}
-
 @end

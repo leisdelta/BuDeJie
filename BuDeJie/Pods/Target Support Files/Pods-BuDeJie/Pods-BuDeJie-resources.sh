@@ -97,6 +97,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CTAssetsPickerController/CTAssetsPickerController.bundle"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png"
@@ -107,6 +108,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CTAssetsPickerController/CTAssetsPickerController.bundle"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png"
