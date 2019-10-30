@@ -40,7 +40,7 @@
     //2.设置窗口根控制器
     XMGTabBarController *tabBarVc = [[XMGTabBarController alloc]init];
     // XMGAdViewController *adVc = [[XMGAdViewController alloc]init];
-    //self.window.rootViewController =adVc;
+   // self.window.rootViewController =adVc;
     self.window.rootViewController =tabBarVc;
      //[UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
 

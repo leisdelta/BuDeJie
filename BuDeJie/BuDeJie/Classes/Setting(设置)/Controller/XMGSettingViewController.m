@@ -14,11 +14,13 @@
 
 @interface XMGSettingViewController ()
 @property (nonatomic, assign) NSInteger totalSize;
+
 @end
 
 @implementation XMGSettingViewController
 
 static NSString * const ID = @"cell";
+
 
 - (void)viewDidLoad {
     
@@ -26,11 +28,10 @@ static NSString * const ID = @"cell";
   
     // 设置导航条左边按钮
     self.title = @"设置";
-    
     // 设置右边
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"jump" style:0 target:self action:@selector(jump)];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
     
     [SVProgressHUD showWithStatus:@"正在计算缓存尺寸...."];
     
@@ -54,17 +55,24 @@ static NSString * const ID = @"cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
     // 计算缓存数据,计算整个应用程序缓存数据 => 沙盒(Cache) => 获取cache文件夹尺寸
-    
+    cell.backgroundColor = XMGRandomColor;
     // 获取缓存尺寸字符串
-    cell.textLabel.text = [self sizeStr];
+    NSString  *numStr = [NSString stringWithFormat:@"---%ld行数据",(long)indexPath.row];
+    NSString *textSize =  [[self sizeStr] stringByAppendingString:numStr];
+    cell.textLabel.text = textSize;
+
+    
+    NSLog(@" %p ",&cell);
     
     return cell;
 }

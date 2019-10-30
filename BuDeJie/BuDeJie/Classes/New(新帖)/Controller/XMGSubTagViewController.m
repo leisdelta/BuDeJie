@@ -12,6 +12,7 @@
 #import <MJExtension/MJExtension.h>
 #import "XMGSubTagCell.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <MJRefresh.h>
 
 @interface XMGSubTagViewController ()
 
@@ -52,6 +53,16 @@ static NSString * const ID = @"subTagCell";
     
 }
 
+-(void)setupRefresh
+{
+    //header
+    self.tableView.mj_header  = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(hello)];
+    //footer
+}
+
+-(void)hello{
+    XMGLog(@"hello world");
+}
 //界面消失调用
 -(void)viewWillDisappear:(BOOL)animated
 {

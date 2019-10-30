@@ -148,7 +148,7 @@
 //        [responseObject writeToFile:@"/Users/lei/Desktop/GitHub/BuDeJie/BuDeJie/BuDeJie/ad.plist" atomically:YES];
         //读取假数据进行测试
         //1.获取路径
-        NSString *path=[NSString stringWithFormat:@"/Users/lei/Desktop/ad.plist"];
+        NSString *path=[NSString stringWithFormat:@"/Users/lei/Desktop/GitHub/BuDeJie/ad.plist"];
 
         //2.获取plist文件的dict
         NSMutableDictionary *plistDic=[NSMutableDictionary dictionaryWithContentsOfFile:path];

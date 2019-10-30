@@ -222,7 +222,7 @@ static CGFloat const margin = 1;
     
     // titleView
     self.navigationItem.title = @"我的";
-    
+
 }
 
 - (void)night:(UIButton *)button

@@ -27,14 +27,20 @@
 		AB339C0723209DE8009BD276 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0023209DE8009BD276 /* LaunchImage-700-568h@2x.png */; };
 		AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB339C0123209DE8009BD276 /* LaunchImage.png */; };
 		AB735D37232B987C005604A9 /* XMGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735D32232B987B005604A9 /* XMGTitleButton.m */; };
-		AB735D41232B9A33005604A9 /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB735D3F232B9A33005604A9 /* XMGTopicCell.m */; };
 		AB76A2562330929700BEC1F0 /* test.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB76A2582330929700BEC1F0 /* test.strings */; };
 		AB76A2602330C6BD00BEC1F0 /* XMGTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76A25E2330C6BC00BEC1F0 /* XMGTopicViewController.m */; };
+		AB76A26323311F9700BEC1F0 /* XMGRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76A26223311F9700BEC1F0 /* XMGRefreshHeader.m */; };
+		AB76A2682331240800BEC1F0 /* XMGDIYFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76A2652331240700BEC1F0 /* XMGDIYFooter.m */; };
+		AB76A2692331240800BEC1F0 /* XMGDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76A2662331240800BEC1F0 /* XMGDIYHeader.m */; };
 		AB842646232103520098CC9C /* XMGADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842645232103520098CC9C /* XMGADItem.m */; };
 		AB842649232202520098CC9C /* XMGSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB842648232202520098CC9C /* XMGSubTagViewController.m */; };
 		AB84264C23224F650098CC9C /* XMGSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264B23224F650098CC9C /* XMGSubTagItem.m */; };
 		AB84265023225C600098CC9C /* XMGSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84264E23225C600098CC9C /* XMGSubTagCell.m */; };
 		AB84265123225C600098CC9C /* XMGSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB84264F23225C600098CC9C /* XMGSubTagCell.xib */; };
+		AB8EC2CE2331AB480074F30A /* XMGHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8EC2CC2331AB470074F30A /* XMGHTTPSessionManager.m */; };
+		AB91090623586E2400CD464A /* XMGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AB91090423586E2400CD464A /* XMGFileTool.m */; };
+		AB91090923586EDE00CD464A /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB91090823586EDE00CD464A /* XMGTopicCell.m */; };
+		AB91090B23586F2400CD464A /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB91090A23586F2400CD464A /* XMGTopicCell.xib */; };
 		ABB08C05231F350F00410F9E /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C04231F350F00410F9E /* XMGTabBar.m */; };
 		ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB08C11231FE2F100410F9E /* XMGNavigationViewController.m */; };
 		ABB6B84A2327822A00B153F4 /* XMGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB6B8432327822900B153F4 /* XMGVideoViewController.m */; };
@@ -50,7 +56,6 @@
 		ABE4B2F72325CF410016463D /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B2EE2325CF400016463D /* XMGMeViewController.m */; };
 		ABE4B2F82325CF410016463D /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B2EF2325CF400016463D /* XMGWebViewController.m */; };
 		ABE4B2F92325CF410016463D /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE4B2F12325CF400016463D /* XMGWebViewController.xib */; };
-		ABE4B30123264F530016463D /* XMGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B30023264F520016463D /* XMGFileTool.m */; };
 		ABE4B30423264FBC0016463D /* XMGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE4B30323264FBC0016463D /* XMGSettingViewController.m */; };
 		ABF63DF3231E14F400E425BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF1231E14F400E425BB /* Main.storyboard */; };
 		ABF63DF5231E14F500E425BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF63DF4231E14F500E425BB /* Assets.xcassets */; };
@@ -63,7 +68,6 @@
 		ABF63E35231E593C00E425BB /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E34231E593C00E425BB /* XMGNewViewController.m */; };
 		ABF63E38231E596200E425BB /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E37231E596200E425BB /* XMGPublishViewController.m */; };
 		ABF63E3F231E8AEA00E425BB /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */; };
-		ABF72D62232CB3390070EF06 /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */; };
 		ABF72D6E232CCC8F0070EF06 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */; };
 		ABF72D71232CCC8F0070EF06 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */; };
 		ABF72D75232CF0BE0070EF06 /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF72D73232CF0BE0070EF06 /* XMGTopicVoiceView.xib */; };
@@ -121,8 +125,6 @@
 		AB339C0123209DE8009BD276 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		AB735D32232B987B005604A9 /* XMGTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTitleButton.m; sourceTree = "<group>"; };
 		AB735D33232B987B005604A9 /* XMGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTitleButton.h; sourceTree = "<group>"; };
-		AB735D3E232B9A33005604A9 /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGTopicCell.h; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.h"; sourceTree = "<group>"; };
-		AB735D3F232B9A33005604A9 /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGTopicCell.m; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.m"; sourceTree = "<group>"; };
 		AB76A25223308E7900BEC1F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		AB76A25323308E7A00BEC1F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		AB76A2572330929700BEC1F0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/test.strings"; sourceTree = "<group>"; };
@@ -130,6 +132,12 @@
 		AB76A25B2330BA7500BEC1F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		AB76A25E2330C6BC00BEC1F0 /* XMGTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicViewController.m; sourceTree = "<group>"; };
 		AB76A25F2330C6BD00BEC1F0 /* XMGTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicViewController.h; sourceTree = "<group>"; };
+		AB76A26123311F9700BEC1F0 /* XMGRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGRefreshHeader.h; sourceTree = "<group>"; };
+		AB76A26223311F9700BEC1F0 /* XMGRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGRefreshHeader.m; sourceTree = "<group>"; };
+		AB76A2642331240700BEC1F0 /* XMGDIYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGDIYHeader.h; sourceTree = "<group>"; };
+		AB76A2652331240700BEC1F0 /* XMGDIYFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGDIYFooter.m; sourceTree = "<group>"; };
+		AB76A2662331240800BEC1F0 /* XMGDIYHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGDIYHeader.m; sourceTree = "<group>"; };
+		AB76A2672331240800BEC1F0 /* XMGDIYFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGDIYFooter.h; sourceTree = "<group>"; };
 		AB842644232103520098CC9C /* XMGADItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGADItem.h; sourceTree = "<group>"; };
 		AB842645232103520098CC9C /* XMGADItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGADItem.m; sourceTree = "<group>"; };
 		AB842647232202520098CC9C /* XMGSubTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagViewController.h; sourceTree = "<group>"; };
@@ -139,6 +147,13 @@
 		AB84264D23225C600098CC9C /* XMGSubTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGSubTagCell.h; sourceTree = "<group>"; };
 		AB84264E23225C600098CC9C /* XMGSubTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGSubTagCell.m; sourceTree = "<group>"; };
 		AB84264F23225C600098CC9C /* XMGSubTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGSubTagCell.xib; sourceTree = "<group>"; };
+		AB8EC2CC2331AB470074F30A /* XMGHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGHTTPSessionManager.m; sourceTree = "<group>"; };
+		AB8EC2CD2331AB470074F30A /* XMGHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGHTTPSessionManager.h; sourceTree = "<group>"; };
+		AB91090423586E2400CD464A /* XMGFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFileTool.m; sourceTree = "<group>"; };
+		AB91090523586E2400CD464A /* XMGFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFileTool.h; sourceTree = "<group>"; };
+		AB91090723586EDE00CD464A /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGTopicCell.h; path = "../../../../../../../Idea:IOS/IOS源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.h"; sourceTree = "<group>"; };
+		AB91090823586EDE00CD464A /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGTopicCell.m; path = "../../../../../../../Idea:IOS/IOS源码及说明文档/07-OC项目/0323/归档/代码/05-BuDeJie-/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.m"; sourceTree = "<group>"; };
+		AB91090A23586F2400CD464A /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMGTopicCell.xib; path = "../../../../../../../Idea:IOS/IOS源码及说明文档/07-OC项目/0324/代码/05-BuDeJie-添加中间内容/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.xib"; sourceTree = "<group>"; };
 		ABB08C03231F350F00410F9E /* XMGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		ABB08C04231F350F00410F9E /* XMGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 		ABB08C09231F5D4500410F9E /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
@@ -167,8 +182,6 @@
 		ABE4B2F02325CF400016463D /* XMGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeViewController.h; sourceTree = "<group>"; };
 		ABE4B2F12325CF400016463D /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
 		ABE4B2F22325CF400016463D /* XMGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWebViewController.h; sourceTree = "<group>"; };
-		ABE4B2FF23264F520016463D /* XMGFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGFileTool.h; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0316/代码/08-设置/05-BuDeJie(文件管理类完整实现)/BuDeJie/Classes/Tool/File/XMGFileTool.h"; sourceTree = "<group>"; };
-		ABE4B30023264F520016463D /* XMGFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGFileTool.m; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0316/代码/08-设置/05-BuDeJie(文件管理类完整实现)/BuDeJie/Classes/Tool/File/XMGFileTool.m"; sourceTree = "<group>"; };
 		ABE4B30223264FBB0016463D /* XMGSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSettingViewController.h; sourceTree = "<group>"; };
 		ABE4B30323264FBC0016463D /* XMGSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSettingViewController.m; sourceTree = "<group>"; };
 		ABF63DE8231E14F400E425BB /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,7 +205,6 @@
 		ABF63E37231E596200E425BB /* XMGPublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGPublishViewController.m; sourceTree = "<group>"; };
 		ABF63E3B231E8AEA00E425BB /* XMGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBarController.h; sourceTree = "<group>"; };
 		ABF63E3C231E8AEA00E425BB /* XMGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBarController.m; sourceTree = "<group>"; };
-		ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMGTopicCell.xib; path = "../../../../../../../快捷方式说明文件夹/小码哥视频教程源码及说明文档/07-OC项目/0324/代码/05-BuDeJie-添加中间内容/BuDeJie/Classes/Essence(精华)/View/XMGTopicCell.xib"; sourceTree = "<group>"; };
 		ABF72D63232CCC8E0070EF06 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
 		ABF72D66232CCC8F0070EF06 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
 		ABF72D6A232CCC8F0070EF06 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
@@ -402,8 +414,8 @@
 		ABE4B2FB232649600016463D /* File */ = {
 			isa = PBXGroup;
 			children = (
-				ABE4B2FF23264F520016463D /* XMGFileTool.h */,
-				ABE4B30023264F520016463D /* XMGFileTool.m */,
+				AB91090523586E2400CD464A /* XMGFileTool.h */,
+				AB91090423586E2400CD464A /* XMGFileTool.m */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -504,9 +516,9 @@
 			children = (
 				AB735D33232B987B005604A9 /* XMGTitleButton.h */,
 				AB735D32232B987B005604A9 /* XMGTitleButton.m */,
-				AB735D3E232B9A33005604A9 /* XMGTopicCell.h */,
-				AB735D3F232B9A33005604A9 /* XMGTopicCell.m */,
-				ABF72D61232CB3390070EF06 /* XMGTopicCell.xib */,
+				AB91090723586EDE00CD464A /* XMGTopicCell.h */,
+				AB91090823586EDE00CD464A /* XMGTopicCell.m */,
+				AB91090A23586F2400CD464A /* XMGTopicCell.xib */,
 				ABFACA2D232E256100F52774 /* XMGTopicPictureView.h */,
 				ABFACA2C232E256100F52774 /* XMGTopicPictureView.m */,
 				ABFACA2E232E256100F52774 /* XMGTopicPictureView.xib */,
@@ -668,6 +680,8 @@
 		ABF63E39231E8AEA00E425BB /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				AB8EC2CD2331AB470074F30A /* XMGHTTPSessionManager.h */,
+				AB8EC2CC2331AB470074F30A /* XMGHTTPSessionManager.m */,
 				ABF63E3A231E8AEA00E425BB /* Controller */,
 				ABF63E3D231E8AEA00E425BB /* Model */,
 				ABF63E3E231E8AEA00E425BB /* View */,
@@ -698,6 +712,12 @@
 			children = (
 				ABB08C03231F350F00410F9E /* XMGTabBar.h */,
 				ABB08C04231F350F00410F9E /* XMGTabBar.m */,
+				AB76A2672331240800BEC1F0 /* XMGDIYFooter.h */,
+				AB76A2652331240700BEC1F0 /* XMGDIYFooter.m */,
+				AB76A2642331240700BEC1F0 /* XMGDIYHeader.h */,
+				AB76A2662331240800BEC1F0 /* XMGDIYHeader.m */,
+				AB76A26123311F9700BEC1F0 /* XMGRefreshHeader.h */,
+				AB76A26223311F9700BEC1F0 /* XMGRefreshHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -805,7 +825,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF72D62232CB3390070EF06 /* XMGTopicCell.xib in Resources */,
 				AB071F43232382450023F9E8 /* XMGFriendTrendViewController.xib in Resources */,
 				AB339BF92320962A009BD276 /* XMGAdViewController.xib in Resources */,
 				ABE4B2F62325CF410016463D /* XMGMeViewController.storyboard in Resources */,
@@ -829,6 +848,7 @@
 				AB339C0623209DE8009BD276 /* LaunchImage-700@2x.png in Resources */,
 				AB339C0423209DE8009BD276 /* LaunchImage-800-667h@2x.png in Resources */,
 				AB339C0223209DE8009BD276 /* LaunchImage@2x.png in Resources */,
+				AB91090B23586F2400CD464A /* XMGTopicCell.xib in Resources */,
 				AB339C0823209DE8009BD276 /* LaunchImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,10 +914,10 @@
 				ABFACA34232E902F00F52774 /* XMGSeeBigPictureViewController.m in Sources */,
 				ABB6B84D2327822A00B153F4 /* XMGWordViewController.m in Sources */,
 				AB167B472324FAF2000FBFC8 /* XMGLoginField.m in Sources */,
+				AB76A26323311F9700BEC1F0 /* XMGRefreshHeader.m in Sources */,
 				ABF72D79232CF1330070EF06 /* XMGTopic.m in Sources */,
 				AB071F4E23239CE10023F9E8 /* XMGLoginRegisterView.m in Sources */,
 				ABFACA2B232DC0F400F52774 /* UIImage+Image.m in Sources */,
-				AB735D41232B9A33005604A9 /* XMGTopicCell.m in Sources */,
 				ABFACA2F232E256100F52774 /* XMGTopicPictureView.m in Sources */,
 				ABFACA25232DBF4800F52774 /* UIImageView+Download.m in Sources */,
 				ABE4B2F72325CF410016463D /* XMGMeViewController.m in Sources */,
@@ -921,18 +941,22 @@
 				ABB6B84B2327822A00B153F4 /* XMGAllViewController.m in Sources */,
 				AB167B44232484A0000FBFC8 /* XMGFastButton.m in Sources */,
 				ABFACA27232DBF4800F52774 /* UIImage+Antialias.m in Sources */,
-				ABE4B30123264F530016463D /* XMGFileTool.m in Sources */,
 				AB339BF723209448009BD276 /* XMGAdViewController.m in Sources */,
 				ABB6B84E2327822A00B153F4 /* XMGPictureViewController.m in Sources */,
+				AB76A2692331240800BEC1F0 /* XMGDIYHeader.m in Sources */,
+				AB91090623586E2400CD464A /* XMGFileTool.m in Sources */,
 				ABB6B84A2327822A00B153F4 /* XMGVideoViewController.m in Sources */,
+				AB76A2682331240800BEC1F0 /* XMGDIYFooter.m in Sources */,
 				ABE4B2F82325CF410016463D /* XMGWebViewController.m in Sources */,
 				ABE4B30423264FBC0016463D /* XMGSettingViewController.m in Sources */,
 				ABB08C12231FE2F100410F9E /* XMGNavigationViewController.m in Sources */,
+				AB91090923586EDE00CD464A /* XMGTopicCell.m in Sources */,
 				ABF63E2F231E58DF00E425BB /* XMGFriendTrendViewController.m in Sources */,
 				ABF63E28231E57B300E425BB /* main.m in Sources */,
 				ABE4B2F52325CF410016463D /* XMGSquareItem.m in Sources */,
 				ABF63E29231E57B300E425BB /* AppDelegate.m in Sources */,
 				ABF72D76232CF0BE0070EF06 /* XMGTopicVoiceView.m in Sources */,
+				AB8EC2CE2331AB480074F30A /* XMGHTTPSessionManager.m in Sources */,
 				ABF72D71232CCC8F0070EF06 /* XMGTopicVideoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1110,6 +1134,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T94XS8MT6L;
 				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1129,6 +1154,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T94XS8MT6L;
 				GCC_PREFIX_HEADER = BuDeJie/Classes/Other/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
